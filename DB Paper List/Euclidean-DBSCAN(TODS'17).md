@@ -76,7 +76,7 @@ https://doi.org/10.1145/3083897
 
 <!-- Media -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_1.jpg?x=511&y=270&w=543&h=296&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_1.jpg"/>
 
 Fig. 1. Examples of density-based clustering from Ester et al. (1996).
 
@@ -228,7 +228,7 @@ As before,let $P$ be a set of $n$ points in $d$ -dimensional space ${\mathbb{R}}
 
 <!-- figureText: ${o}_{10}$ ${o}_{1}$ ${o}_{8}$ 07 Og 。 ${o}_{18}$ ${o}_{13}$ - ${o}_{11}$ ${o}_{14}$ ${o}_{12}$ ${o}_{15}$ ${o}_{16}$ ${}^{ \bullet  }{o}_{17}$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_4.jpg?x=492&y=261&w=584&h=448&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_4.jpg"/>
 
 Fig. 2. An example dataset (the two circles have radius $\epsilon ;$ MinPts $= 4$ ).
 
@@ -300,7 +300,7 @@ Remark. A cluster can contain both core and non-core points. Any non-core point 
 
 <!-- figureText: o10 ${C}_{4}$ ${o}_{0}$ ... (b) Graph $G$ (c) $\epsilon$ -neighbor cells (in gray) of the cell of ${o}_{10}$ 。 ${}_{1}^{1}{c}_{3}$ $\epsilon /\sqrt{2}$ $\epsilon /\sqrt{2}$ (a) Core cells are shown in gray -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_5.jpg?x=148&y=257&w=1269&h=498&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_5.jpg"/>
 
 Fig. 3. DBSCAN with a grid $\left( {\text{ MinPts } = 4}\right)$ .
 
@@ -348,7 +348,7 @@ In Figure 3(b), $k = 2$ ,and ${V}_{1} = \left\{  {{c}_{1},{c}_{2},{c}_{3}}\right
 
 <!-- figureText: closest pair (b) USEC (c) Hopcroft (a) BCP -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_6.jpg?x=145&y=261&w=1274&h=349&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_6.jpg"/>
 
 Fig. 4. Three relevant geometric problems.
 
@@ -688,7 +688,7 @@ Definition 4.2. A $\rho$ -approximate cluster $C$ is a non-empty subset of $P$ s
 
 <!-- figureText: ${o}_{1}$ 0.3 ${O}_{2} \bullet$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_11.jpg?x=586&y=262&w=392&h=428&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_11.jpg"/>
 
 Fig. 5. Density-reachability and $\rho$ -approximate density-reachability $\left( {\text{ MinPts } = 4}\right)$ .
 
@@ -756,7 +756,7 @@ THEOREM 4.3 (SANDWICH QUALITY GUARANTEE). The following statements are true:
 
 <!-- figureText: ( $b\breve{a}d$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_12.jpg?x=393&y=263&w=779&h=402&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_12.jpg"/>
 
 Fig. 6. Good and bad choices of $\epsilon$ .
 
@@ -860,7 +860,7 @@ Query. Given an approximate range count query with parameters $q,\epsilon ,\rho$
 
 <!-- figureText: a level-0 cell number of points in this level-0 cell root(18) level 0 NW(2) NE(8) SW(8) level 1 NE(3) SW(5) NE(4) SW(4) $B\left( {q,\epsilon \left( {1 + \rho }\right) }\right)$ SE(2) $B\left( {q,\epsilon }\right)$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_14.jpg?x=373&y=262&w=821&h=415&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_14.jpg"/>
 
 Fig. 7. Approximate range counting.
 
@@ -968,7 +968,7 @@ Time Analysis. It takes $O\left( n\right)$ expected time to construct the struct
 
 <!-- figureText: ${o}_{1}$ (b) Delaunay graph (c) Remainder graph after edge removal ${o}_{2}$ (a) Voronoi diagram -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_16.jpg?x=145&y=262&w=1272&h=534&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_16.jpg"/>
 
 Fig. 8. Illustration of our Step-2 algorithm in Section 5.1.
 
@@ -1096,7 +1096,7 @@ $$
 
 <!-- figureText: ${p}_{2}$ ${p}_{4}$ ${\widetilde{p}}_{6}$ ${\widetilde{p}}_{4}$ $\left( {p}_{7}\right)$ ${p}_{6}$ $/{p}_{3}$ $\left( {p}_{1}\right)$ ${\widetilde{p}}_{1}$ ${\widetilde{p}}_{3}$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_18.jpg?x=357&y=263&w=855&h=314&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_18.jpg"/>
 
 Fig. 9. Correctness proof of our Step-2 algorithm.
 
@@ -1328,7 +1328,7 @@ ${}^{3}$ 如果 ${c}_{0} = \varnothing$（即，${L}_{j}$ 中没有单元格被�
 
 <!-- figureText: ✘ ✘ ✘ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_21.jpg?x=453&y=262&w=661&h=419&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_21.jpg"/>
 
 Fig. 10. USEC with line separation.
 
@@ -1368,7 +1368,7 @@ Generating $G$ in $O\left( n\right)$ Time. We now return to our endeavor of find
 
 <!-- figureText: ${c}_{2}$ ${c}_{2}$ $\ell$ ${c}_{1}$ (b) Case 2 ${c}_{1}$ (a) Case 1 -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_22.jpg?x=511&y=264&w=546&h=302&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_22.jpg"/>
 
 Fig. 11. Deciding the existence of an edge by USEC with line separation.
 
@@ -1418,7 +1418,7 @@ Heuristics. The three most effective heuristics in our implementation can be sum
 
 <!-- Media -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_23.jpg?x=380&y=262&w=776&h=310&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_23.jpg"/>
 
 Fig. 12. A small $\epsilon$ for the left cluster is large for the other two clusters.
 
@@ -1496,7 +1496,7 @@ Figure 13 shows a small 2D dataset which was generated with $n = 1,{000}$ and fo
 
 <!-- Media -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_25.jpg?x=530&y=266&w=501&h=434&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_25.jpg"/>
 
 Fig. 13. A 2D seed spreader dataset.
 
@@ -1704,7 +1704,7 @@ Next, we turned to the real datasets. Table 4 gives the statistics for PAMAP2, F
 
 <!-- figureText: 500 reachability distance 1m 1.5m 2m OPTICS ordering 1m 1.5m $2\mathrm{\;m}$ OPTICS ordering 300 100 0.5m (a) SS-simden-5D 3000 2500 1500 1000 500 0 0.5m (b) SS-varden-5D -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_29.jpg?x=148&y=260&w=1271&h=503&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_29.jpg"/>
 
 Fig. 14. Optics diagrams for 5D synthetic data.
 
@@ -1712,7 +1712,7 @@ Fig. 14. Optics diagrams for 5D synthetic data.
 
 <!-- figureText: 5000 reachability distance 2m 2.5m $3\mathrm{\;m}$ 3.5m OPTICS ordering ${2.5}\mathrm{\;m}$ 3.5m OPTICS ordering 1m 1.5m $2\mathrm{\;m}$ OPTICS ordering 4000 3000 2000 1000 0 0 0.5m 1m 1.5m (a) PAMAP2 5000 reachability distance 4000 3000 2000 1000 0.5m 1m 1.5m (b) Farm 10000 reachability distance 8000 6000 4000 2000 0 0.5m (c) Household -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_29.jpg?x=147&y=858&w=1272&h=760&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_29.jpg"/>
 
 Fig. 15. Optics diagrams for real datasets.
 
@@ -1820,7 +1820,7 @@ In this subsection,we evaluate the quality of the clusters returned by the propo
 
 <!-- figureText: (a) Exact ( $\epsilon  = {5000}$ ) (b) $\rho  = {0.001},\epsilon  = {5000}$ (c) $\rho  = {0.01},\epsilon  = {5000}$ (d) $\rho  = {0.1},\epsilon  = {5000}$ (h) $\rho  = {0.1},\epsilon  = {11300}$ ract $\left( {\epsilon  = {12200}}\right)$ (j) $\rho  = {0.001},\epsilon  = {12200}$ (k) $\rho  = {0.01},\epsilon  = {12200}$ (l) $\rho  = {0.1},\epsilon  = {122}$ (e) Exact ( $\epsilon  = {11300}$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_32.jpg?x=147&y=261&w=1274&h=958&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_32.jpg"/>
 
 Fig. 16. Comparison of the clusters found by exact DBSCAN and $\rho$ -approximate DBSCAN.
 
@@ -1848,7 +1848,7 @@ Surprised by $\rho  = {0.01}$ not working,we examined the reason behind its fail
 
 <!-- figureText: error free $\rho$ error free $\rho$ error free $\rho$ 0.1 0.01 0.001 $\varepsilon \left( {10}^{3}\right)$ 4 5 0.1 $\varepsilon \left( {10}^{3}\right)$ 5 (b) SS-simden-5D (c) SS-simden-7D error free $\rho$ 0.1 0.01 0.001 8 $\left( {10}^{3}\right)$ 4 5 0.1 1 ${}_{\epsilon \left( {10}^{3}\right) }^{2}$ 4 5 (e) SS-varden-5D (f) SS-varden-7D error free $\rho$ 0.1 0.01 0.001 4 5 0.1 1 4 5 $\varepsilon \left( {10}^{3}\right)$ $\varepsilon \left( {10}^{3}\right)$ (h) Farm (i) Household 0.1 0.1 0.01 0.01 0.001 0.001 0 0 0.1 4 5 0.1 $\varepsilon \left( {10}^{3}\right)$ (a) SS-simden-3D error free $\rho$ error free $\rho$ 1 0.1 0.1 0.01 0.01 0.001 0.001 0 0 0.1 $\varepsilon \left( {10}^{3}\right)$ 4 5 0.1 1 (d) SS-varden-3D error free $\rho$ error free $\rho$ 1 0.1 0.1 0.01 0.01 0.001 0.001 0 0.1 4 5 0.1 1 $\varepsilon \left( {10}^{3}\right)$ (g) ${PAMAP2}$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_33.jpg?x=135&y=256&w=1290&h=1250&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_33.jpg"/>
 
 Fig. 17. Largest $\rho$ in $\{ {0.001},{0.01},{0.1},1\}$ for our $\rho$ -approximate DBSCAN algorithm to return the same results as precise DBSCAN.
 
@@ -1912,7 +1912,7 @@ OurApprox - SIG算法的性能在第一个合成数据集SS - simden - 3D和第�
 
 <!-- figureText: OurApprox OurExact OurApprox-SIG SkLearn ${10}^{4}$ time (sec) ${10}^{3}$ ${10}^{2}$ 10 0.1 0.2 0.4 4 5 $\varepsilon \left( {10}^{3}\right)$ $\varepsilon \left( {10}^{3}\right)$ (b) SS-simden-5D (c) SS-simden-7D ${10}^{3}$ time (sec) ${10}^{2}$ 10 4 5 0.1 0.2 0.4 45 $\varepsilon \left( {10}^{3}\right)$ $\varepsilon \left( {10}^{3}\right)$ (e) SS-varden-5D (f) SS-varden-7D 1000 time (sec) 800 600 400 200 0 0.7.1 3 4 5 0.1 0.2 0.4 2 $\varepsilon \left( {10}^{5}\right)$ $\varepsilon \left( {10}^{3}\right)$ (h) Farm (i) Household CIT08 KDD96 ${10}^{4}$ time (sec) ${10}^{4}$ time (sec) ${10}^{3}$ ${10}^{3}$ ${10}^{2}$ ${10}^{2}$ 10 10 0.1 0.1 0.2 0.4 2 4 5 0.1 0.2 0.4 $\varepsilon \left( {10}^{3}\right)$ (a) SS-simden-3D ${10}^{4}$ time (sec) ${10}^{4}$ time (sec) ${10}^{3}$ ${10}^{3}$ ${10}^{2}$ ${10}^{2}$ 10 10 0.1 0.1 0.2 0.4 45 0.1 0.2 0.4 $\varepsilon \left( {10}^{3}\right)$ (d) SS-varden-3D 200 time (sec) 2000 time (sec) 150 1500 100 1000 50 500 10 0.1 0.2 0.4 45 0.1 0.2 0.4 $\varepsilon \left( {10}^{3}\right)$ (g) ${PAMAP2}$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_35.jpg?x=141&y=260&w=1274&h=1313&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_35.jpg"/>
 
 Fig. 18. Running time vs. $\epsilon \left( {d \geq  3}\right)$ .
 
@@ -1936,7 +1936,7 @@ $\rho$的影响。图20展示了OurApprox算法在$\rho$从0.001变化到0.1时�
 
 <!-- figureText: OurApprox OurExact CIT08 KDD96 SkLearn ${10}^{3}$ time (sec) ${10}^{2}$ 10 0.1 10 10 n (million) n (million) (c) SS-simden-7D ${10}^{3}$ time (sec) ${10}^{2}$ 10 1 0.1 10 0.1 1 2 10 n (million) n (million) (f) SS-varden-7D ${10}^{3}$ time (sec) ${10}^{3}$ time (sec) ${10}^{2}$ ${10}^{2}$ 10 10 0.1 0.1 10 n (million) (a) SS-simden-3D (b) SS-simden-5D ${10}^{3}$ time (sec) ${10}^{3}$ time (sec) ${10}^{2}$ ${10}^{2}$ 10 10 1 0.1 1 0.01 5 10 0.1 2 n (million) (d) SS-varden-3D (e) SS-varden-5D -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_36.jpg?x=148&y=260&w=1277&h=875&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_36.jpg"/>
 
 Fig. 19. Running time vs. $n\left( {d \geq  3}\right)$ .
 
@@ -1944,7 +1944,7 @@ Fig. 19. Running time vs. $n\left( {d \geq  3}\right)$ .
 
 <!-- figureText: ${10}^{2}$ time (sec) ${10}^{2}$ time (sec) SS-varden-3D ${10}^{5}$ time (sec) PAMAP2 SS-varden-5D -□ ${10}^{4}$ Farm Household SS-varden-7D $\rightarrow$ ${10}^{3}$ ${10}^{2}$ 10 0.06 0.08 0.1 0.001 0.02 0.04 0.06 0.08 0.1 p p (b) SS varying density data (c) Real datasets SS-simden-3D SS-simden-5D - ☐ SS-simden-7D $\rightarrow$ 10 10 0.001 0.02 0.04 0.06 0.08 0.1 0.001 0.02 0.04 (a) SS similar density data -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_36.jpg?x=149&y=1243&w=1269&h=434&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_36.jpg"/>
 
 Fig. 20. Running time vs. $\rho \left( {d \geq  3}\right)$ .
 
@@ -1952,7 +1952,7 @@ Fig. 20. Running time vs. $\rho \left( {d \geq  3}\right)$ .
 
 <!-- figureText: OurApprox OurExact CIT08 KDD96 SkLearn 120 time (sec) 100 80 60 40 20 60 80 100 0 20 40 60 80 100 minPts minPts (c) SS-simden-7D ${10}^{3}$ time (sec) ${10}^{2}$ 10 60 80 100 20 40 60 80 100 minPts minPts (f) SS-varden-7D ${10}^{3}$ time (sec) ${10}^{2}$ 10 60 80 100 20 40 60 80 100 minPts minPts (i) Household 60 time (sec) 80 time (sec) 45 60 30 40 15 20 0 20 40 60 80 100 10 20 40 minPts (a) SS-simden-3D (b) SS-simden-5D ${10}^{3}$ time (sec) ${10}^{3}$ time (sec) ${10}^{2}$ ${10}^{2}$ 10 10 1 10 20 40 60 80 100 10 20 40 minPts (d) SS-varden-3D (e) SS-varden-5D ${10}^{3}$ time (sec) ${10}^{4}$ time (sec) ${10}^{2}$ ${10}^{3}$ 10 ${10}^{2}$ 10 20 40 60 80 100 10 20 40 minPts (g) ${PAMAP2}$ (h) Farm -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_37.jpg?x=143&y=257&w=1275&h=1269&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_37.jpg"/>
 
 Fig. 21. Running time vs. MinPts $\left( {d \geq  3}\right)$ .
 
@@ -1992,7 +1992,7 @@ In this subsection, we will focus on exact DBSCAN in 2D space, and compare the f
 
 <!-- figureText: Wavefront Delaunay G13 KDD96 SkLearn ${10}^{3}$ time (sec) ${10}^{2}$ 10 1 0.1 0.01 2 10 n (million) (b) SS-varden-2D ${10}^{2}$ time (sec) 10 0.1 0.01 0.1 2 10 n (million) (a) SS-simden-2D -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_38.jpg?x=198&y=264&w=1174&h=486&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_38.jpg"/>
 
 Fig. 22. Running time vs. $n\left( {d = 2}\right)$ .
 
@@ -2000,7 +2000,7 @@ Fig. 22. Running time vs. $n\left( {d = 2}\right)$ .
 
 <!-- figureText: Wavefront Delaunay KDD96 SkLearn ${10}^{4}$ time (sec) ${10}^{3}$ ${10}^{2}$ 10 1 0.1 0.1 1 2 $\varepsilon \left( {10}^{3}\right)$ (b) SS-varden-2D ${10}^{3}$ time (sec) ${10}^{2}$ 10 1 0.1 100 200 400 800 E (a) SS-simden-2D -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_38.jpg?x=198&y=836&w=1171&h=488&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_38.jpg"/>
 
 Fig. 23. Running time vs. $\epsilon \left( {d = 2}\right)$ .
 
@@ -2032,7 +2032,7 @@ Finally, we inspected the influence of MinPts on the running time. The results a
 
 <!-- figureText: Wavefront Delaunay G13 KDD96 SkLearn ${10}^{3}$ time (sec) ${10}^{2}$ 10 1 0.1 20 40 60 80 100 minPts (b) SS-varden-2D ${10}^{2}$ time (sec) 10 1 0.1 20 40 60 80 100 minPts (a) SS-simden-2D -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_39.jpg?x=194&y=263&w=1176&h=487&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_39.jpg"/>
 
 Fig. 24. Running time vs. MinPts $\left( {d = 2}\right)$ .
 
@@ -2108,7 +2108,7 @@ Proposition A.4. The wavefront is x-monotone, namely, no vertical line can inter
 
 <!-- figureText: upper arc of $s$ active region of $s$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_40.jpg?x=511&y=1509&w=551&h=168&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_40.jpg"/>
 
 Fig. 25. Illustration of active region and upper arc.
 
@@ -2116,7 +2116,7 @@ Fig. 25. Illustration of active region and upper arc.
 
 <!-- figureText: ${S}_{3}$ (b) Wavefront (solid curve) ${s}_{1}$ ${s}_{6}$ ${s}_{5}$ ${s}_{2}$ ${s}_{4}$ (a) Coverage region $U$ (the shaded area) -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_40.jpg?x=165&y=1767&w=1249&h=302&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_40.jpg"/>
 
 Fig. 26. Deciding the existence of an edge by USEC with line separation.
 
@@ -2124,7 +2124,7 @@ Fig. 26. Deciding the existence of an edge by USEC with line separation.
 
 <!-- figureText: ${W}_{1}$ l $p$ ${I}_{2}$ ${s}_{2}l$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_41.jpg?x=489&y=262&w=590&h=253&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_41.jpg"/>
 
 Fig. 27. Illustration of the Step-1 algorithm in Section A.1.
 
@@ -2192,7 +2192,7 @@ Now consider the case where $p$ is not covered by ${s}_{\text{last }}$ . This im
 
 <!-- figureText: arc defined by ${s}_{1}$ arc defined by ${s}_{3}$ ${s}_{6}$ arc defined by ${s}_{5}$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91b-4734-77b1-933f-3c7cb33c7bfe_42.jpg?x=469&y=264&w=630&h=282&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91b-4734-77b1-933f-3c7cb33c7bfe_42.jpg"/>
 
 Fig. 28. Illustration of the Step-3 algorithm in Section A.1.
 

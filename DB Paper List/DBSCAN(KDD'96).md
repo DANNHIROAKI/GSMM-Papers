@@ -102,7 +102,7 @@ When looking at the sample sets of points depicted in figure 1, we can easily an
 
 <!-- figureText: ... database 3 database 1 database 2 -->
 
-<img src="https://cdn.noedgeai.com/0195c912-ef4a-7c11-b8a2-dcec81361fe7_1.jpg?x=971&y=821&w=684&h=273&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c912-ef4a-7c11-b8a2-dcec81361fe7_1.jpg"/>
 
 figure 1: Sample databases
 
@@ -146,7 +146,7 @@ Obviously, directly density-reachable is symmetric for pairs of core points. In 
 
 <!-- figureText: (a) (b) p directly density- reachable from $q$ ${qnotdirectlydensity}$ reachable from p p: border point $q :$ core point -->
 
-<img src="https://cdn.noedgeai.com/0195c912-ef4a-7c11-b8a2-dcec81361fe7_2.jpg?x=163&y=857&w=701&h=164&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c912-ef4a-7c11-b8a2-dcec81361fe7_2.jpg"/>
 
 ## figure 2: core points and border points
 
@@ -182,7 +182,7 @@ Now, we are able to define our density-based notion of a cluster. Intuitively, a
 
 <!-- figureText: (a) (b) p and q density- connected to each other by 0 p density- reachable from q q not density- reachable from p -->
 
-<img src="https://cdn.noedgeai.com/0195c912-ef4a-7c11-b8a2-dcec81361fe7_2.jpg?x=942&y=155&w=711&h=161&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c912-ef4a-7c11-b8a2-dcec81361fe7_2.jpg"/>
 
 ## figure 3: density-reachability and density-connectivity
 
@@ -261,37 +261,37 @@ DBSCAN（点集，邻域半径Eps，最小点数MinPts）
 // 点集未分类
 
 	ClusterId := nextId(NOISE);
-
+	
 	  聚类编号 := 下一个编号（噪声点编号）;
-
+	
 	FOR i FROM 1 TO SetOfPoints.size DO
-
+	
 	  对于从1到点集大小的i执行循环
-
+	
 		Point := SetOfPoints.get(i);
-
+	
 		    点 := 点集获取(i);
-
+	
 		IF Point.ClId = UNCLASSIFIED THEN
-
+	
 		    如果点的聚类编号 = 未分类 则
-
+	
 			IF ExpandCluster (SetOfPoints, Point,
-
+	
 			      如果扩展聚类（点集，点，
-
+	
 							ClusterId, Eps, MinPts) THEN
-
+	
 							                      聚类编号，邻域半径Eps，最小点数MinPts）为真 则
-
+	
 				ClusterId := nextId(ClusterId)
-
+	
 				        聚类编号 := 下一个编号（聚类编号）
-
+	
 			END IF
-
+	
 		END IF
-
+	
 	END FOR
 
 END; // DBSCAN
@@ -321,113 +321,113 @@ ExpandCluster (SetOfPoints, Point, ClId, Eps,
 扩展聚类（点集，点，聚类编号，邻域半径，
 
 												MinPts) : Boolean;
-
+	
 												最小点数）：布尔型;
-
+	
 		seeds:=SetOfPoints.regionQuery(Point,Eps);
-
+	
 		种子点集 := 点集的区域查询（点，邻域半径）;
-
+	
 		IF seeds.size<MinPts THEN // no core point
-
+	
 		如果种子点集的大小 < 最小点数 那么 // 不是核心点
-
+	
 			SetOfPoint.changeClId(Point,NOISE) ;
-
+	
 			点集更改该点的聚类编号为噪声;
-
+	
 			RETURN False;
-
+	
 			返回假;
-
+	
 		ELSE // all points in seeds are density-
-
+	
 		否则 // 种子点集中的所有点都可以从该点密度
-
+	
 							// reachable from Point
-
+	
 							 // 可达
-
+	
 			SetOfPoints.changeClIds(seeds,ClId);
-
+	
 			点集将种子点集的聚类编号更改为聚类编号;
-
+	
 			seeds.delete(Point);
-
+	
 			种子点集删除该点;
-
+	
 			WHILE seeds <> Empty DO
-
+	
 			当种子点集不为空时
-
+	
 					currentP := seeds.first(   );
-
+	
 					当前点 := 种子点集的第一个点;
-
+	
 					result := SetOfPoints.regionQuery(currentP,
-
+	
 					结果 := 点集的区域查询（当前点，
-
+	
 																																	Eps);
-
+	
 																																	邻域半径）;
-
+	
 					IF result.size >= MinPts THEN
-
+	
 					如果结果的大小 >= 最小点数 那么
-
+	
 						FOR i FROM 1 TO result.size DO
-
+	
 						对于从 1 到结果大小的 i 执行
-
+	
 								resultP := result.get(i);
-
+	
 								resultP := result.get(i);（结果P 赋值为 result 列表中索引为 i 的元素）
-
+	
 								IF resultP. ClId
-
+	
 								如果 结果P 的类别ID（ClId）
-
+	
 											IN \{UNCLASSIFIED, NOISE\} THEN
-
+	
 											属于 {未分类（UNCLASSIFIED）, 噪声（NOISE）} 则
-
+	
 										IF resultP.Clid = UNCLASSIFIED THEN
-
+	
 										如果 结果P 的类别ID（ClId）等于 未分类（UNCLASSIFIED）则
-
+	
 											seeds.append(resultP) ;
-
+	
 											将 结果P 添加到种子列表（seeds）中;
-
+	
 										END IF ;
-
+	
 										SetOfPoints.changeClId(resultP,ClId);
-
+	
 										点集（SetOfPoints）将 结果P 的类别ID（ClId）修改为 ClId;
-
+	
 								END IF; // UNCLASSIFIED or NOISE
-
+	
 								结束条件判断; // 未分类（UNCLASSIFIED）或 噪声（NOISE）
-
+	
 							END FOR;
-
+	
 					END IF; // result.size >= MinPts
-
+	
 					结束条件判断; // 结果列表（result）的大小 大于等于 最小点数（MinPts）
-
+	
 					seeds.delete(currentP);
-
+	
 					从种子列表（seeds）中删除 当前点（currentP）;
-
+	
 			END WHILE; // seeds <> Empty
-
+	
 			结束循环; // 种子列表（seeds）不为空
-
+	
 			RETURN True;
-
+	
 			返回真;
-
+	
 		END IF
 
 ---
@@ -466,7 +466,7 @@ For a given $k$ we define a function $k$ -dist from the database $D$ to the real
 
 <!-- figureText: 4-dist threshold point points noise clusters -->
 
-<img src="https://cdn.noedgeai.com/0195c912-ef4a-7c11-b8a2-dcec81361fe7_4.jpg?x=273&y=1308&w=600&h=273&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c912-ef4a-7c11-b8a2-dcec81361fe7_4.jpg"/>
 
 figure 4: sorted 4-dist graph for sample database 3
 
@@ -510,7 +510,7 @@ To compare DBSCAN with CLARANS in terms of effectivity (accuracy), we use the th
 
 <!-- figureText: database 1 database 2 database 3 -->
 
-<img src="https://cdn.noedgeai.com/0195c912-ef4a-7c11-b8a2-dcec81361fe7_4.jpg?x=1000&y=1375&w=678&h=256&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c912-ef4a-7c11-b8a2-dcec81361fe7_4.jpg"/>
 
 figure 5: Clusterings discovered by CLARANS
 
@@ -530,7 +530,7 @@ DBSCAN从所有样本数据库中发现了所有聚类（根据定义5）并检�
 
 <!-- figureText: database 1 database 2 道 database 3 -->
 
-<img src="https://cdn.noedgeai.com/0195c912-ef4a-7c11-b8a2-dcec81361fe7_5.jpg?x=180&y=151&w=675&h=259&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c912-ef4a-7c11-b8a2-dcec81361fe7_5.jpg"/>
 
 ## figure 6: Clusterings discovered by DBSCAN
 

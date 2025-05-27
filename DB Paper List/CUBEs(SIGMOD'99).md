@@ -156,7 +156,7 @@ HAVING COUNT $\left( *\right)  >  =$ N
 
 <!-- figureText: 500 200 Sum of Group-bys Sizes $< X$ 150 100 50 0 0 0.2 0.4 0.6 0.8 Group-by Size / Input Size (b) Total Space Blow-up Count of Group-bys Sizes $< X$ 400 300 200 100 0 0.2 0.4 0.6 0.8 1 Group-by Size / Input Size (a) Group-by Size -->
 
-<img src="https://cdn.noedgeai.com/0195c911-dbd0-7407-a430-dcafc8db3855_2.jpg?x=106&y=70&w=1500&h=548&r=0"/>
+![image-20250420144217992](https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/image-20250420144217992.png)
 
 Figure 1: Space requirements for the weather dataset
 
@@ -234,7 +234,7 @@ ${}^{1}$ 请注意，传统的关联规则问题可以通过将每个项作为�
 
 <!-- figureText: ABCD ACD BCD BC BD CD C all ABC ABD AB AC AD A B -->
 
-<img src="https://cdn.noedgeai.com/0195c911-dbd0-7407-a430-dcafc8db3855_3.jpg?x=110&y=79&w=499&h=382&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c911-dbd0-7407-a430-dcafc8db3855_3.jpg"/>
 
 Figure 2: 4-Dimensional Lattice
 
@@ -242,7 +242,7 @@ Figure 2: 4-Dimensional Lattice
 
 <!-- figureText: biggest $\rightarrow$ ABCD $\rightarrow$ smallest ACD BCD BC BD CD C D all ABC ABD AB AC AD A B -->
 
-<img src="https://cdn.noedgeai.com/0195c911-dbd0-7407-a430-dcafc8db3855_3.jpg?x=628&y=76&w=495&h=386&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c911-dbd0-7407-a430-dcafc8db3855_3.jpg"/>
 
 Figure 3: Sample Processing Tree
 
@@ -250,7 +250,7 @@ Figure 3: Sample Processing Tree
 
 <!-- figureText: 5 ABCD 8 ACD 12 BCD 11 BC 13 BD 15 CD 14 C 16 D 1 all 4 ABC 6 ABD 7 AC 9 AD 2 A 10 B -->
 
-<img src="https://cdn.noedgeai.com/0195c911-dbd0-7407-a430-dcafc8db3855_3.jpg?x=1141&y=89&w=497&h=373&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c911-dbd0-7407-a430-dcafc8db3855_3.jpg"/>
 
 Figure 4: BUC Processing Tree
 
@@ -351,11 +351,11 @@ Inputs:
 输入：
 
 		input: The relation to aggregate.
-
+	
 		  输入：要进行聚合的关系。
-
+	
 		dim: The starting dimension for this iteration.
-
+	
 		  维度：本次迭代的起始维度。
 
 Globals:
@@ -363,39 +363,39 @@ Globals:
 全局变量：
 
 		constant numDims: The total number of dimensions.
-
+	
 		常量numDims：维度的总数。
-
+	
 		constant cardinality[numDims]: The cardinality of
-
+	
 		常量cardinality[numDims]：
-
+	
 					each dimension.
-
+	
 					每个维度的基数。
-
+	
 		constant minsup: The minimum number of tuples in a
-
+	
 		常量minsup：一个分区中要输出的元组的最小数量。
-
+	
 					partition for it to be output.
-
+	
 					为了使其能够输出。
-
+	
 		outputRec: The current output record.
-
+	
 		outputRec：当前的输出记录。
-
+	
 		dataCount[numDims]: Stores the size of each partition.
-
+	
 		dataCount[numDims]：存储每个分区的大小。
-
+	
 					dataCount[i] is a list of integers of size
-
+	
 					dataCount[i]是一个大小为
-
+	
 					cardinality[i].
-
+	
 					cardinality[i]的整数列表。
 
 Outputs:
@@ -403,15 +403,15 @@ Outputs:
 输出：
 
 		One record that is the aggregation of input.
-
+	
 		一条记录，它是输入的聚合结果。
-
+	
 		Recursively, outputs CUBE(dim, ..., numDims) on
-
+	
 		递归地，在
-
+	
 					input (with minimum support).
-
+	
 					输入（具有最小支持度）上输出CUBE(dim, ..., numDims)。
 
 Method:
@@ -419,73 +419,73 @@ Method:
 方法：
 
 	1: Aggregate(input); // Places result in outputRec
-
+	
 	1: 聚合(input); // 将结果放入outputRec
-
+	
 	2: if input.count(   ) == 1 then // Optimization
-
+	
 	2: 如果input.count(   ) == 1 则 // 优化
-
+	
 					WriteAncestors(input[0], dim); return;
-
+	
 					写入祖先节点（输入[0]，维度）；返回;
-
+	
 			write outputRec;
-
+	
 			写入输出记录;
-
+	
 			for $\mathrm{d} = \dim ;\mathrm{d} <$ numDims $;\mathrm{d} +  + \mathrm{{do}}$
-
+	
 			对于 $\mathrm{d} = \dim ;\mathrm{d} <$ 个维度 $;\mathrm{d} +  + \mathrm{{do}}$
-
+	
 					let $C =$ cardinality[d];
-
+	
 					设 $C =$ 为基数[d];
-
+	
 					Partition(input, d, C, dataCount[d]);
-
+	
 					对输入、维度d、C和数据计数[d]进行分区;
-
+	
 					let $\mathrm{k} = 0$ ;
-
+	
 					令 $\mathrm{k} = 0$ ;
-
+	
 					for $\mathrm{i} = 0;\mathrm{i} < \mathrm{C};\mathrm{i} +  +$ do // For each partition
-
+	
 					对于 $\mathrm{i} = 0;\mathrm{i} < \mathrm{C};\mathrm{i} +  +$ 执行 // 对于每个分区
-
+	
 						let $c =$ dataCount $\left\lbrack  d\right\rbrack  \left\lbrack  i\right\rbrack$
-
+	
 						令 $c =$ 数据计数 $\left\lbrack  d\right\rbrack  \left\lbrack  i\right\rbrack$
-
+	
 						if $c >  =$ minsup then $//$ The BUC stops here
-
+	
 						如果 $c >  =$ 小于最小支持度（minsup），则 $//$ BUC 在此处停止
-
+	
 								outputRec.dim[d] $=$ input[k].dim[d];
-
+	
 								输出记录的维度 [d] $=$ 输入 [k] 的维度 [d];
-
+	
 								BottomUpCube(input[k ... k+c], d+1);
-
+	
 								自底向上立方体算法（BottomUpCube）（输入 [k ... k + c]，d + 1）;
-
+	
 						end if
-
+	
 						结束条件判断
-
+	
 						$\mathrm{k} +  = \mathrm{c}$ ;
-
+	
 					end for
-
+	
 					结束循环
-
+	
 				outputRec.dim[d] $=$ ALL;
-
+	
 				输出记录的维度 [d] $=$ 全部（ALL）;
-
+	
 			end for
-
+	
 			结束循环
 
 ---
@@ -516,7 +516,7 @@ BUC 的详细步骤如图 5 所示。第一步是对整个输入进行聚合（�
 
 <!-- figureText: b2 d1 d2 c2 b1 al b3 b4 a2 a3 a4 -->
 
-<img src="https://cdn.noedgeai.com/0195c911-dbd0-7407-a430-dcafc8db3855_5.jpg?x=232&y=63&w=481&h=534&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c911-dbd0-7407-a430-dcafc8db3855_5.jpg"/>
 
 Figure 6: BUC Partitioning
 
@@ -816,7 +816,7 @@ ${}^{3}$ 尽管随着维度的增加，数据立方体（CUBE）变得更加稀�
 
 <!-- figureText: Cardinality $= {10}$ Cardinality $= {100}$ Cardinality $= {1000}$ BUC 2500 BUC MemoryCube 2000 MemoryCube Est. I/O Time/ Est. I/O Time Time (sec) 1500 1000 500 0 8 10 8 10 Dimensions Dimensions 2500 2500 2000 MemoryCube 2000 Est. I/O Time Time (sec) 1500 Time (sec) 1500 1000 1000 500 500 0 0 2 4 8 10 2 Dimensions -->
 
-<img src="https://cdn.noedgeai.com/0195c911-dbd0-7407-a430-dcafc8db3855_9.jpg?x=74&y=0&w=1531&h=418&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c911-dbd0-7407-a430-dcafc8db3855_9.jpg"/>
 
 Figure 7: Full CUBE computation
 
@@ -824,7 +824,9 @@ Figure 7: Full CUBE computation
 
 <!-- figureText: Dimensions = 11 Dimensions = 11 600 Card $= {100}$ 500 Card=1000 Time (sec) 400 300 200 100 0 70 80 90100 0 8 12 16 Minimum Support Number of Aggregates Figure 9: Est. I/O with min. support Figure 10: Additional aggregates 1000 BUC(1) Time (sec) 500 BUC(100) BUC(1)-dup Skew First MemoryCube Skew Last 2 0 2 6 10 Skew Number of Skewed Dimensions Figure 12: Increasing skew Figure 13: Skewed dimension order BUC BUC-Dedup MemoryCube Est. I/O Time 40 60 80 100 Minimum Support 2000 2000 Card $= {10}$ Card=100 1500 Card=1000 1500 Time (sec) 1000 500 Time (sec) 1000 500 0 0 0 10 20 30 40 60 80 90 100 10 20 30 Minimum Support Figure 8: BUC with min. support Cardinality $= {1000}$ 1500 BUC 1000 MemoryCube Time (sec) 1000 Time (sec) 500 500 2 4 6 8 10 0 Max Group-by Attributes Figure 11: Limited dimensions 500 2000 400 1500 Time (sec) 300 BUC Time (sec) 1000 200 MemoryCube Est. I/O Time 100 500 0 0 20 40 60 80 100 20 Minimum Support -->
 
-<img src="https://cdn.noedgeai.com/0195c911-dbd0-7407-a430-dcafc8db3855_9.jpg?x=54&y=543&w=1545&h=1382&r=0"/>
+
+
+![image-20250420144847141](https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/image-20250420144847141.png)
 
 Figure 15: Mail-order sales data
 

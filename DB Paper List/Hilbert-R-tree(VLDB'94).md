@@ -162,7 +162,7 @@ Definition 1 : The Hilbert value of a rectangle is defined as the Hilbert value 
 
 <!-- figureText: 13 11 12 15 ${\mathrm{H}}_{3}$ 14 ${\mathrm{H}}_{2}$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_2.jpg?x=540&y=152&w=757&h=352&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_2.jpg"/>
 
 Figure 1: Hilbert Curves of order 1, 2 and 3
 
@@ -262,7 +262,7 @@ To insert a new rectangle $r$ in the Hilbert R-tree,the Hilbert value $h$ of the
 
 <!-- figureText: (30,75) II (61.75) (68,75) (56)50) III (80,40) [107] [206] ${}^{x}$ [98] [92] (35,65) (60) [107] (36,40) (20,38) (45,35) [33] (50,10) (3,5 (0,0) -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_3.jpg?x=381&y=155&w=1024&h=762&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_3.jpg"/>
 
 Figure 2: Data rectangles organized in a Hilbert R-tree
 
@@ -270,7 +270,7 @@ Figure 2: Data rectangles organized in a Hilbert R-tree
 
 <!-- figureText: LHV XL YL XH YH LHY XL YL XH YH LHV XL YL XH 55 75 206 50 10 LHV</i07 四 $\angle {HV} <  = {206}^{ \circ  }$ XH WH XL XH YH XL YL XH YH YL 81 78 33 8 35 40 107 20 38 ${LHV} <  = {33}$ H YH XL YL XH XL XH YH XL 20 30 78 -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_3.jpg?x=376&y=1030&w=1061&h=339&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_3.jpg"/>
 
 Figure 3: The file structure for the previous Hilbert R-tree
 
@@ -546,7 +546,7 @@ We compare the Hilbert R-tree against the original R-tree ( quadratic split) and
 
 <!-- figureText: 550.00 50k points and 10k rectangles; 2-to-3 split policy Elbert R-1999 Quest 10-3 150.00 200.00 250.00 \$00.00 450.00 400.00 350.00 250.00 200.00 150.00 100.00 50.00 0.00 0.00 50.00 100.00 -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_5.jpg?x=900&y=395&w=658&h=673&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_5.jpg"/>
 
 Figure 4: Points and Rectangles ('Mix' Dataset); Disk Accesses vs. Query Area
 
@@ -554,7 +554,7 @@ Figure 4: Points and Rectangles ('Mix' Dataset); Disk Accesses vs. Query Area
 
 <!-- figureText: 100k rectangles; 2-to-3 split policy Hubertless Question 150.00 200.00 250.00 Pages Touched 850.00 800.00 750.00 700.00 650.00 S50.00 500.00 400.00 300.00 250.00 200.00 150.00 50,00 0.00 0.00 50.00 100.00 -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_5.jpg?x=900&y=1224&w=652&h=674&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_5.jpg"/>
 
 Figure 5: Rectangles Only ('Rects' dataset); Disk Accesses vs. Query Area
 
@@ -562,7 +562,7 @@ Figure 5: Rectangles Only ('Rects' dataset); Disk Accesses vs. Query Area
 
 <!-- figureText: 75k points; 2-to-3 split policy Hubert R-tree Resistant Question 3 150.00 200.00 250.00 600.00 550.00 500.00 450.00 400.00 350.00 300.00 250.00 200.00 150.00 100.00 50.00 0.00 50.00 100.00 -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_6.jpg?x=226&y=153&w=650&h=668&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_6.jpg"/>
 
 Figure 6: Points Only ('Points' dataset); Disk Accesses vs. Query Area
 
@@ -598,7 +598,7 @@ Figure 9 shows the response time as a function of the query size for the 1-to-2,
 
 <!-- figureText: Montgomery County: 39717 line segements; 2-to-3 split policy HilbertR-toss 400.00 500.00 360.00 340.00 320.00 300.00 260.00 240.00 220.00 200.00 180.00 160.00 140.00 120.00 100.00 80.00 60.00 40.00 20.00 0.00 100.00 200.00 300.00 -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_6.jpg?x=961&y=148&w=650&h=674&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_6.jpg"/>
 
 Figure 7: Montgomery County Dataset; Disk Accesses vs. Query Area
 
@@ -626,7 +626,7 @@ Table 4.3 shows the effect of increasing the split policy in the Hilbert R-tree 
 
 <!-- figureText: Long Beach: 53145 line segements; 2-to-3 split policy Bulleen R-ton Res Quest 10-3 150.00 200.00 250.00 800.00 700.00 650.00 600.00 500.00 400.00 300.00 250.00 200.00 100.00 0.00 0.00 50.00 100.00 -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_7.jpg?x=183&y=156&w=647&h=655&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_7.jpg"/>
 
 Figure 8: Long Beach Dataset; Disk Accesses vs. Query Area
 
@@ -666,7 +666,7 @@ Montgomery County: 39717 line segements; different split policies
 
 <!-- figureText: 7-4 300.00 400.00 500.00 Pages Tenched 360.00 320.00 300.00 280.00 260.00 240.00 220.00 200.00 180.00 160.00 140.00 120.00 100.00 80.06 60.00 40.00 20.00 0.00 0.00 100.00 200.00 -->
 
-<img src="https://cdn.noedgeai.com/0195c91a-8dea-7cc4-9d3d-d760172328bb_7.jpg?x=910&y=166&w=646&h=646&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91a-8dea-7cc4-9d3d-d760172328bb_7.jpg"/>
 
 Figure 9: The Effect of The Split Policy; Disk Accesses vs. Query Area
 

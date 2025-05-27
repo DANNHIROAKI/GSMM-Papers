@@ -416,7 +416,7 @@ The results. Figure 1 shows the performance of the algorithms in the linear thre
 
 <!-- figureText: 1200 greedy centra random 20 25 target set size 1000 800 600 200 5 -->
 
-<img src="https://cdn.noedgeai.com/0195c910-bd4b-76f9-b113-bcf4539c1837_5.jpg?x=926&y=632&w=702&h=508&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c910-bd4b-76f9-b113-bcf4539c1837_5.jpg"/>
 
 Figure 1: Results for the linear threshold model
 
@@ -440,7 +440,7 @@ The graph for the independent cascade model with probability $1\%$ ,given in Fig
 
 <!-- figureText: 700 greedy central random target set size 600 active set size 500 400 300 200 100 -->
 
-<img src="https://cdn.noedgeai.com/0195c910-bd4b-76f9-b113-bcf4539c1837_6.jpg?x=155&y=162&w=701&h=506&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c910-bd4b-76f9-b113-bcf4539c1837_6.jpg"/>
 
 Figure 2: Results for the weighted cascade model
 
@@ -448,7 +448,7 @@ Figure 2: Results for the weighted cascade model
 
 <!-- figureText: 90 greedy central 15 25 30 target set size 60 active set size 50 40 30 20 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c910-bd4b-76f9-b113-bcf4539c1837_6.jpg?x=155&y=941&w=698&h=508&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c910-bd4b-76f9-b113-bcf4539c1837_6.jpg"/>
 
 Figure 3: Independent cascade model with probability $1\%$
 
@@ -468,7 +468,7 @@ The first targeted node, if chosen somewhat judiciously, will activate a large f
 
 <!-- figureText: 3000 degree random 20 30 target set size 2500 2000 active set size 1000 500 0 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c910-bd4b-76f9-b113-bcf4539c1837_6.jpg?x=924&y=168&w=698&h=504&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c910-bd4b-76f9-b113-bcf4539c1837_6.jpg"/>
 
 Figure 4: Independent cascade model with probability ${10}\%$
 
@@ -717,7 +717,7 @@ $$
 $$
 
 $$
-\left. {\mathop{\prod }\limits_{{j > \max \left( {u,v}\right) ,j \in  A}}{h}_{j}\left( \mathbf{y}\right)  \cdot  \mathop{\prod }\limits_{{j > \max \left( {u,v}\right) ,j \notin  A}}\left( {1 - {h}_{j}\left( \mathbf{y}\right) }\right) }\right) 
+\left. {\mathop{\prod }\limits_{{j > \max \left( {u,v}\right) ,j \in  A}}{h}_{j}\left( \mathbf{y}\right)  \cdot  \mathop{\prod }\limits_{{j > \max \left( {u,v}\right) ,j \notin  A}}\left( {1 - {h}_{j}\left( \mathbf{y}\right) }\right) }\right)
 $$
 
 In this expression, all terms are non-negative (by monotonicity of the ${h}_{v}\left( \cdot \right)$ ),with the exception of $\sigma \left( {A+\{ u,v\} }\right)  - \sigma \left( {A + u}\right)  -$ $\sigma \left( {A + v}\right)  + \sigma \left( A\right)$ ,which is non-positive because $\sigma$ is submodular. Hence,the above difference is always non-positive,so $g$ satisfies the diminishing returns condition (1).

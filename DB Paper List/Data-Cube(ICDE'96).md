@@ -150,7 +150,7 @@ GROUP BY is an unusual relational operator: It partitions the relation into disj
 
 <!-- figureText: Grouping Values Aggregate Values Sum(   ) Partitioned Table -->
 
-<img src="https://cdn.noedgeai.com/0195c917-ccec-7034-a8ba-1657644e94c3_1.jpg?x=206&y=629&w=649&h=274&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c917-ccec-7034-a8ba-1657644e94c3_1.jpg"/>
 
 Figure 1: The GROUP BY relational operator partitions a table into groups. Each group is then aggregated by a function. The aggregation function summarizes some column of groups returning a value for each group.
 
@@ -460,7 +460,7 @@ We extend SQL's SELECT-GROUP-BY-HAVING syntax to support histograms, decorations
 
 <!-- figureText: Aggregate By Color The Data Cube and The Sub-Space Aggregates By Yea By Make By Color & Year By Make & Color Sum By Color Sum Group By (with total) By Color RED WHITE BLUE Sum Cross Tab Chevy Ford RED WHITE BLUE By Make Sum By Make & Year -->
 
-<img src="https://cdn.noedgeai.com/0195c917-ccec-7034-a8ba-1657644e94c3_3.jpg?x=917&y=212&w=636&h=596&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c917-ccec-7034-a8ba-1657644e94c3_3.jpg"/>
 
 Figure 2: The CUBE operator is the $N$ -dimensional generalization of simple aggregate functions. The 0D data cube is a point. The ID data cube is a line with a point. The 2D data cube is a cross tab, a plane, two lines, and a point. The 3D data cube is a cube with three intersecting 2D cross tabs.
 
@@ -493,17 +493,17 @@ GROUP BY
 { ( <列名> | <表达式>)
 
 	[ AS <correlation name> ]
-
+	
 	[ 作为 <关联名> ]
-
+	
 	[ <collate clause> ]
-
+	
 	[ <排序子句> ]
 
 ...\}
 
 	[ WITH ( CUBE | ROLLUP ) ]
-
+	
 	[ 使用 ( CUBE | ROLLUP ) ]
 
 ---
@@ -512,7 +512,7 @@ GROUP BY
 
 <!-- figureText: FROM Saies MANKE blue Chevy 1990 Chevy 1990 ALL 154 Chevy 1991 Chevy 1991 1 ed 54 Chevi 1,001 Chevi 1992 blue 71 100 Chevy 1990 white 54 Chevr, 1992 Chevy ALL 1 ed 90 Chavy ALL Chevi ALL ALL 508 blue Fouri 1990 Foi-1 1990 white -60 Fould 1 ""1 blue 55 Found 1991 52 Ford 1.59% ALL 116 Ford 1990 For a 1000 tod 27 Foid 1992 128 Foid ALL blue 157 ted Foid ALL white 133 For a 4.3.3 [ALL 1990 Led 69 IALL 1990 14.9 [AL]. 1990 ALL 343 fall 1 ** 104 ALL 1991 white 110 ALL 1990 blue 110 1990 white ALL (100) ALL [8] ALL ALL 3,3 ALL Ali i et 233 WHERE Model in \{'Ford', 'Chevy'\} GROUP BY Model, Yeal, Color WITH CUBE; SALES Model Year Color Sales Chovy 1990 which is CUBE Chevy 1990 blue Chevy 1991 Chevy 1990 blue Chevy 1992 white 54 Chev, 1992 blue Foid 1990 t 6 d Found 1990 which is 62 Foid 1991 1 test Foid 1991 which 9 Fot 4 1992 1 ed Fot d 1992 white -->
 
-<img src="https://cdn.noedgeai.com/0195c917-ccec-7034-a8ba-1657644e94c3_4.jpg?x=238&y=229&w=639&h=699&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c917-ccec-7034-a8ba-1657644e94c3_4.jpg"/>
 
 Figure 3: A 3D data cube (right) built from the table at the left by the CUBE statement at the top of the figure.
 
@@ -539,11 +539,11 @@ Model.ALL = ALL (Model) = \{Chevy, Ford \}
 Model.ALL = ALL (Model) = {雪佛兰, 福特}
 
 	Year. ALL $=$ ALL (Year) $= \{ {1990},{1991},{1992}\}$
-
+	
 	Year. ALL $=$ ALL (Year) $= \{ {1990},{1991},{1992}\}$
-
+	
 	Color.ALL = ALL(Color) = \{red,white,blue\}
-
+	
 	Color.ALL = ALL(Color) = {红色, 白色, 蓝色}
 
 ---
@@ -771,17 +771,17 @@ If the value set is two dimensional, this commonly used financial function is a 
 ---
 
 	SELECT V
-
+	
 	FROM cube
-
+	
 	从 数据立方体 中选取
-
+	
 	WHERE row = : i
-
+	
 	条件是 行 = : i
-
+	
 	AND column $=  : j$
-
+	
 	并且 列 $=  : j$
 
 We recommend the simpler syntax:
@@ -789,7 +789,7 @@ We recommend the simpler syntax:
 我们推荐更简单的语法：
 
 	cube.v(:i, :j)
-
+	
 	数据立方体.v(:i, :j)
 
 ---

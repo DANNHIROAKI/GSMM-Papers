@@ -126,7 +126,7 @@ As described above, an R-tree leaf node contains a minimal bounding rectangle an
 
 <!-- figureText: R1 R3 R0 R1 R2 R4 : d 9 R5 : C R6 : e f (b) h R6 R2 R4 R3 : a b (a) -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_6.jpg?x=228&y=223&w=1183&h=452&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_6.jpg"/>
 
 Fig. 1. An R-tree index for a set of nine line segments. (a) Spatial rendering of the line segments and bounding rectangles; (b) a tree access structure for (a). In the interest of clarity, the bounding rectangles for the individual line segments are omitted from (a) .
 
@@ -221,31 +221,18 @@ if QueryObject is in node Node then
 如果查询对象在节点中，则
 
 	if Node is a leaf node then
-
 	如果该节点是叶节点，则
-
 		Report leaf node Node
-
 		报告叶节点
-
 	else
-
 	否则
-
 		for each Child of node Node do
-
 		对该节点的每个子节点执行
-
 			FINDLEAF(QueryObject, Child)
-
 			查找叶节点(查询对象, 子节点)
-
 		enddo
-
 		结束循环
-
 	endif
-
 	结束条件判断
 
 endif
@@ -264,7 +251,7 @@ To resolve this dilemma, we replace the recursion stack of the regular top-down 
 
 <!-- Media -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_10.jpg?x=559&y=220&w=514&h=512&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_10.jpg"/>
 
 Fig. 2. The circle around query object $q$ depicts the search region after reporting $o$ as next nearest object. For simplicity, the leaf nodes are represented by a grid; in most spatial indexes, the shapes of the leaf nodes are more irregular than in a grid. Only the shaded leaf nodes are accessed by the incremental nearest neighbor algorithm. The region with darker shading is where we find the objects in the priority queue.
 
@@ -289,92 +276,50 @@ INCNEAREST( Query Object, SpatialIndex)
 增量最近邻算法（查询对象，空间索引）
 
 			Queue $\leftarrow$ NEWPRIORITYQUEUE(   )
-
 			 队列$\leftarrow$ 新建优先队列( )
-
 			Enqueue(Queue, SpatialIndex.RootNode, 0)
-
 			 入队(队列，空间索引.根节点，0)
-
 		while not ISEMPTY (Queue) do
-
 		 当队列不为空时执行以下操作
-
 				Element $\leftarrow$ DEQUEUE(Queue)
-
 				 元素$\leftarrow$ 出队(队列)
-
 				if Element is a spatial object then
-
 				 如果元素是一个空间对象
-
 						while Element $=$ FIRST(Queue) do
-
 						 当元素$=$ 是队列的第一个元素时执行以下操作
-
 							DELETEFIRST (Queue)
-
 							 删除队列的第一个元素
-
 						enddo
-
 						 结束循环
-
 						Report Element
-
 						 报告该元素
-
 				elseif Element is a leaf node then
-
 				 否则如果元素是一个叶节点
-
 						for each Object in leaf node Element do
-
 						 对于叶节点元素中的每个对象执行以下操作
-
 							if DIST $\left( \text{Query Object,Object}\right)  \geq$ DIST(Query Object,Element)then
-
 							如果距离 $\left( \text{Query Object,Object}\right)  \geq$ DIST(查询对象, 元素)，则
-
 									Enqueue( Queue, Object, DIST( Query Object, Object) $)$
-
 									将(队列, 对象, DIST(查询对象, 对象) $)$ 入队
-
 							endif
-
 							结束条件判断
-
 						enddo
-
 						结束循环
-
 				else /* Element is a non-leaf node */
-
 				否则 /* 元素是一个非叶子节点 */
-
 						for each Child node of node Element in SpatialIndex do
-
 						对于空间索引中元素节点的每个子节点，执行以下操作
-
 							Enqueue( Queue, Child, DIST( QueryObject, Child))
-
 							将(队列, 子节点, DIST(查询对象, 子节点))入队
-
 						enddo
-
 						结束循环
-
 				endif
-
 				结束条件判断
-
 			enddo
-
 			结束循环
 
-						Fig. 3. Incremental nearest neighbor algorithm.
-
-						图3. 增量最近邻算法。
+Fig. 3. Incremental nearest neighbor algorithm.
+图3. 增量最近邻算法。
 
 ---
 
@@ -413,95 +358,50 @@ Figure 4 shows our algorithm. In lines 1-2, the queue is initialized. In line 9,
 ---
 
 				INCNEAREST( Query Object, R-tree)
-
 				增量最近邻算法(查询对象, R树)
-
 								Queue $\leftarrow$ NEWPRIORITYQUEUE(   )
-
 								队列 $\leftarrow$ 新建优先队列(   )
-
 								Enqueue(Queue,R-tree.RootNode,0)
-
 								入队(队列, R树的根节点, 0)
-
 								while not ISEMPTY( Queue) do
-
 								当队列不为空时执行
-
 										Element $\leftarrow$ DEQUEUE(Queue)
-
 										元素 $\leftarrow$ 出队(队列)
-
 									if Element is an object or its bounding rectangle then
-
 									如果元素是一个对象或其边界矩形
-
 												if Element is the bounding rectangle of Object and not ISEMPTY (Queue)
-
 												如果元素（Element）是对象（Object）的边界矩形，并且队列（Queue）不为空
-
 														and DIST( Query Object, Object) > FIRST( Queue ). Key then
-
 														并且查询对象（Query Object）与对象（Object）之间的距离（DIST）大于队列（Queue）的第一个元素的键值，则
-
 														Enqueue (Queue, Object, DIST( Query Object, Object) $)$
-
 														将对象（Object）及其与查询对象（Query Object）的距离（DIST）$)$入队到队列（Queue）中
-
 												else
-
 												否则
-
 														Report Element (or if bounding rectangle, the associated object)
-
 														将元素（Element）（或者如果是边界矩形，则是关联的对象）报告为
-
 														as the next nearest object
-
 														下一个最近的对象
-
 												endif
-
 												结束条件判断
-
 										elseif Element is a leaf node then
-
 										否则，如果元素（Element）是叶节点，则
-
 												for each entry (Object, Rect) in leaf node Element do
-
 												对于叶节点元素（Element）中的每个条目（对象（Object），矩形（Rect））执行以下操作
-
 													Enqueue( Queue, [Object], DIST( QueryObject, Rect) )
-
 													将对象（Object）及其与查询对象（QueryObject）的矩形（Rect）的距离（DIST）入队到队列（Queue）中
-
 												enddo
-
 												结束循环
-
 										else /* Element is a non-leaf node */
-
 										否则 /* 元素（Element）是非叶节点 */
-
 												for each entry (Node, Rect) in node Element do
-
 												对于节点元素（Element）中的每个条目（节点（Node），矩形（Rect））执行以下操作
-
 														Enqueue(Queue, Node, Dist( QueryObject, Rect) $)$
-
 														将节点（Node）及其与查询对象（QueryObject）的矩形（Rect）的距离（Dist）$)$入队到队列（Queue）中
-
 												enddo
-
 												结束循环
-
 										endif
-
 										结束条件判断
-
 							enddo
-
 							结束循环
 
 Fig. 4. Incremental nearest neighbor algorithm for an R-tree where spatial objects are stored
@@ -605,150 +505,80 @@ JCNEAREST( Query Object, SpatialIndex, Min, Max, DoFarthest)
 JCNEAREST( 查询对象, 空间索引, 最小值, 最大值, 是否查找最远对象)
 
 		Queue $\leftarrow$ NEWPRIORITYQUEUE(   )
-
 		队列 $\leftarrow$ 新建优先队列(   )
-
 		Enqueue( Queue, SpatialIndex.RootNode, 0)
-
 		将( 队列, 空间索引.根节点, 0) 入队
-
 		if DoFarthest then
-
 		如果需要查找最远对象
-
 				KeySign $\leftarrow   - 1$
-
 				键符号 $\leftarrow   - 1$
-
 		else
-
 		否则
-
 				KeySign $\leftarrow  1$
-
 				键符号 $\leftarrow  1$
-
 		endif
-
 		结束条件判断
-
 		while not ISEMPTY (Queue) do
-
 		当队列不为空时执行以下操作
-
 				Element $\leftarrow$ DEQUEUE(Queue)
-
 				元素 $\leftarrow$ 出队(队列)
-
 				if Element is a spatial object then
-
 				如果元素是一个空间对象，则
-
 						while Element $= \operatorname{FIRST}\left( \text{ Queue }\right)$ do
-
 						当元素 $= \operatorname{FIRST}\left( \text{ Queue }\right)$ 时
-
 							DELETEFIRST( Queue)
-
 							删除首个元素(队列)
-
 						enddo
-
 						结束循环
-
 						Report Element
-
 						报告元素
-
 				elseif Element is a leaf node then
-
 				否则，如果元素是一个叶节点，则
-
 						$e \leftarrow$ Element. Key*KeySign
-
 						$e \leftarrow$ 元素.键 * 键符号
-
 						for each Object in leaf node Element do
-
 						对于叶节点元素中的每个对象，执行以下操作
-
 								$d \leftarrow$ DIST(QueryObject,Object)
-
 								$d \leftarrow$ 距离(查询对象,对象)
-
 								if $d \geq$ Min and $d \leq$ Max and KeySign $* \left( {d - e}\right)  \geq  0$ then
-
 								如果 $d \geq$ 小于最小值且 $d \leq$ 大于最大值且键符号 $* \left( {d - e}\right)  \geq  0$，则
-
 										ENQUEUE( Queue, Object, KeySign * d )
-
 										入队(队列, 对象, 键符号 * d)
-
 								endif
-
 								结束条件判断
-
 						enddo
-
 						结束循环
-
 				else /* Element is a non-leaf node */
-
 				否则 /* 元素是一个非叶节点 */
-
 						for each Child node of node Element in SpatialIndex do
-
 						对于空间索引中节点元素的每个子节点，执行以下操作
-
 								${d}_{\min } \leftarrow$ MINDIST(QueryObject,Child)
-
 								${d}_{\min } \leftarrow$ 最小距离(查询对象,子对象)
-
 								${d}_{\max } \leftarrow  \operatorname{MaxDist}\left( \text{ QueryObject,Child }\right)$
-
 								if ${d}_{\max } \geq$ Min and ${d}_{\min } \leq$ Max then
-
 								如果 ${d}_{\max } \geq$ 为最小值且 ${d}_{\min } \leq$ 为最大值，则
-
 										if DoFarthest then
-
 										如果执行最远查询，则
-
 												$d \leftarrow  {d}_{\max }$
-
 										else
-
 										否则
-
 												$d \leftarrow  {d}_{\min }$
-
 										endif
-
 										结束条件判断
-
 										Enqueue( Queue, Child, KeySign * d )
-
 										将(队列, 子对象, 键符号 * d)入队
-
 								endif
-
 								结束条件判断
-
 						enddo
-
 						结束循环
-
 				endif
-
 				结束条件判断
-
 		enddo
-
 		结束循环
 
-		Fig. 5. Enhanced incremental nearest neighbor algorithm.
-
-		图 5. 增强型增量最近邻算法。
+Fig. 5. Enhanced incremental nearest neighbor algorithm.
+	
+图 5. 增强型增量最近邻算法。
 
 ---
 
@@ -856,7 +686,7 @@ The correctness of the duplicate removal (lines 6-8 in Figure 3) follows directl
 
 <!-- Media -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_21.jpg?x=520&y=221&w=593&h=602&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_21.jpg"/>
 
 Fig. 6. An example of an R-tree of points with node capacity of 8 , showing a worst case for nearest neighbor search.
 
@@ -937,91 +767,49 @@ Figure 7 shows the $k$ -nearest neighbor algorithm,where NearestList denotes the
 ---
 
 	NEAREST( $k$ ,QueryObject,SpatialIndex)
-
 	NEAREST( $k$ ,查询对象,空间索引)
-
 			NearestList $\leftarrow$ NEWLIST(k)
-
 			NearestList $\leftarrow$ NEWLIST(k)
-
 			KNEARESTTRAVERSAL(NearestList, k, Query Object, SpatialIndex.RootNode)
-
 			KNEARESTTRAVERSAL(NearestList, k, 查询对象, 空间索引.根节点)
-
 			return NearestList
-
 			返回NearestList
-
-(NEARESTTRAVERSAL(NearestList, k, QueryObject, Node)
-
-(NEARESTTRAVERSAL(NearestList, k, 查询对象, 节点)
-
+	
+	(NEARESTTRAVERSAL(NearestList, k, QueryObject, Node)
+	(NEARESTTRAVERSAL(NearestList, k, 查询对象, 节点)
 			if Node is a leaf node then
-
 			如果节点是叶节点
-
 					for each Object in Node do
-
 					对于节点中的每个对象
-
 							if DIST(QueryObject, Object) < NearestList.MaxDist then
-
 							如果DIST(查询对象, 对象) < NearestList.MaxDist
-
 										INSERT(NearestList, DIST( Query Object, Object), Object)
-
 										INSERT(NearestList, DIST( 查询对象, 对象), 对象)
-
 							endif
-
 							结束条件判断
-
 					enddo
-
 					结束循环
-
 			else
-
 			否则
-
 					ActiveBranchList $\leftarrow$ entries in Node
-
 					活动分支列表 $\leftarrow$ 节点中的条目
-
 					SORTBRANCHLIST( QueryObject, ActiveBranchList)
-
 					对分支列表排序（查询对象，活动分支列表）
-
 					for each Child node in ActiveBranchList do
-
 					对活动分支列表中的每个子节点执行以下操作
-
 							if DIST(QueryObject, Child) < NearestList.MaxDist then
-
 							如果查询对象与子节点的距离（DIST）小于最近列表的最大距离（NearestList.MaxDist），则
-
 										KNEARESTTRAVERSAL(NearestList, k, QueryObject, Child)
-
 										执行K近邻遍历（最近列表，k值，查询对象，子节点）
-
 							else
-
 							否则
-
 										exit loop
-
 										退出循环
-
 							endif
-
 							结束条件判断
-
 					enddo
-
 					结束循环
-
 			endif
-
 			结束条件判断
 
 ---
@@ -1092,7 +880,7 @@ The final contents of NearestList is $\{ \left( {h,{17}}\right) ,\left( {a,{17}}
 
 <!-- figureText: a a r r O (b) 0 q (a) -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_27.jpg?x=470&y=231&w=689&h=387&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_27.jpg"/>
 
 Fig. 8. An example of MinDIST (solid line) and MinMAXDIST (broken line) for a bounding rectangle $r$ . The distance of the object $o$ from $q$ is bounded from below by $\operatorname{MINDIST}\left( {q,r}\right)$ and from above by MinMaxDist(q,r). Notice that in (b) point $b$ is closer to $q$ than point $a$ ,while this is not the case in (a).
 
@@ -1232,7 +1020,7 @@ The randomly generated line segment maps were constructed by generating random i
 
 <!-- figureText: (a) (b) (d) (c) -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_33.jpg?x=260&y=248&w=1144&h=1084&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_33.jpg"/>
 
 Fig. 9. The four real-world data sets from the TIGER/Line File: (a) Howard, (b) Water, (c) PG, and (d) Roads.
 
@@ -1264,7 +1052,7 @@ In all the experiments that we conducted, the maps were embedded in a ${16}\math
 
 <!-- figureText: 100 INN (PG) INN (R64K) -+--- 3 k-NN, k=1,2,... (PG) k-NN, k=5,10,... (PG) 15 20 25 Number of nearest neighbors Execution time (ms, log scale) 10 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_35.jpg?x=226&y=229&w=539&h=437&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_35.jpg"/>
 
 Fig. 10. Cumulative execution time for distance browsing.
 
@@ -1272,7 +1060,7 @@ Fig. 10. Cumulative execution time for distance browsing.
 
 <!-- figureText: R-tree node disk I/Os (log scale) 100 INN (PG) INN (R64K) J. K-NN, k=1,2,… (PG) - 曰 -- k-NN, k=5,10,... (PG) 15 20 25 Number of nearest neighbors 10 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_35.jpg?x=831&y=227&w=553&h=440&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_35.jpg"/>
 
 Fig. 11. Cumulative R-tree node disk I/O for distance browsing.
 
@@ -1296,7 +1084,7 @@ Figures 10 through 12 show each measure's cumulative cost for distance browsing 
 
 <!-- figureText: Dbject distance calculations (log) 1000 INN (PG) INN (R64K) $\mathrm{k} - \mathrm{{NN}},\mathrm{k} = 1,2,\ldots ,\left( \mathrm{{PG}}\right) \}  - \pi  -$ k-NN, k=5,10,... (PG) 15 20 25 Number of nearest neighbors 100 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_36.jpg?x=226&y=227&w=549&h=439&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_36.jpg"/>
 
 Fig. 12. Cumulative object distance calculations for distance browsing.
 
@@ -1304,7 +1092,7 @@ Fig. 12. Cumulative object distance calculations for distance browsing.
 
 <!-- figureText: 500 100 1000 Number of nearest neighbors (logscale) Execution time relative to INN (%) Prune ( 450 Restart ([4]) Prune (50) 400 Restart (50) 350 300 250 200 150 100 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_36.jpg?x=835&y=225&w=556&h=443&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_36.jpg"/>
 
 Fig. 13. Execution time of $k$ -NN relative to that of INN when used for distance browsing when the $k$ -NN approach is made as good as possible.
 
@@ -1344,7 +1132,7 @@ ${}^{4}$ “剪枝（5）”在5个近邻处应该有一个尖峰，但实际上
 
 <!-- figureText: Execution time (ms, log scale) 1 INN (PG) k-NN (PG) _____. INN (R64K) k-NN (R64K) 15 20 25 Number of nearest neighbors 0.1 0.01 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_38.jpg?x=226&y=229&w=551&h=438&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_38.jpg"/>
 
 Fig. 14. Incremental execution times for distance browsing.
 
@@ -1352,7 +1140,7 @@ Fig. 14. Incremental execution times for distance browsing.
 
 <!-- figureText: R-tree node disk I/Os (log scale) 10 INN (PG) k-NN (PG) INN (R64K) - 曰 -- k-NN (R64K) -> 15 20 25 Number of nearest neighbors 0.1 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_38.jpg?x=832&y=230&w=551&h=437&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_38.jpg"/>
 
 Fig. 15. Incremental R-tree node disk I/O for distance browsing.
 
@@ -1384,7 +1172,7 @@ We now consider what the cost would be if we used the incremental nearest neighb
 
 <!-- figureText: Object distance calculations (lo 00 INN (PG) k-NN (PG) INN (R64K) k-NN (R64K) 15 20 25 Number of nearest neighbors 10 1 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_39.jpg?x=239&y=230&w=539&h=437&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_39.jpg"/>
 
 Fig. 16. Incremental object distance calculations for distance browsing.
 
@@ -1392,7 +1180,7 @@ Fig. 16. Incremental object distance calculations for distance browsing.
 
 <!-- figureText: Execution time (milliseconds) 5 INN (PG) -><---- 15 20 25 Number of nearest neighbors k-NN (PG) INN (R64K) 4.5 k-NN (R64K) 4 3.5 3 2.5 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_39.jpg?x=847&y=229&w=536&h=437&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_39.jpg"/>
 
 Fig. 17. Execution time for $k$ -nearest neighbor query.
 
@@ -1412,7 +1200,7 @@ For the execution time (Figure 17), we see that the two algorithms have similar 
 
 <!-- figureText: 13 INN (PG) k-NN (PG) INN (R64K) k-NN (R64K) 15 20 25 Number of nearest neighbors R-tree node disk I/Os 12 11 10 9 8 7 6 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_40.jpg?x=225&y=227&w=553&h=440&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_40.jpg"/>
 
 Fig. 18. R-tree node disk I/O for $k$ -nearest neighbor query.
 
@@ -1420,7 +1208,7 @@ Fig. 18. R-tree node disk I/O for $k$ -nearest neighbor query.
 
 <!-- figureText: Dbject distance calculations (170) INN (PG) k-NN (PG) INN (R64K) k-NN (R64K) 15 20 25 Number of nearest neighbors 120 100 80 60 40 5 10 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_40.jpg?x=848&y=230&w=536&h=437&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_40.jpg"/>
 
 Fig. 19. Object distance calculations for $k$ -nearest neighbor query.
 
@@ -1444,7 +1232,7 @@ For the object distance calculations (Figure 19), we see that the INN algorithm 
 
 <!-- figureText: Execution time (ms, logscale) 0.1 INN (PG) k-NN (PG) -+-- INN (R64K) - 曰 -- k-NN (R64K) 8 10 12 16 log2(Number of nearest neighbors) 0 2 4 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_41.jpg?x=231&y=229&w=536&h=439&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_41.jpg"/>
 
 Fig. 20. Execution time per neighbor for $k$ -nearest neighbor query.
 
@@ -1452,7 +1240,7 @@ Fig. 20. Execution time per neighbor for $k$ -nearest neighbor query.
 
 <!-- figureText: R-tree node disk I/Os (logscale) 0.1 INN (PG) k-NN (PG) _____. INN (R64K) - 曰 -- k-NN (R64K) ->----- 8 10 12 14 16 log2(Number of nearest neighbors) 0 2 6 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_41.jpg?x=846&y=227&w=534&h=442&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_41.jpg"/>
 
 Fig. 21. R-tree node disk I/O per neighbor for $k$ -nearest neighbor query.
 
@@ -1476,7 +1264,7 @@ In the previous sections we investigated the performance of the two algorithms b
 
 <!-- figureText: Dbject distance calculations (logscale 10 INN (PG) k-NN (PG) INN (R64K) - 巴 - - k-NN (R64K) 8 10 12 14 16 log2(Number of nearest neighbors) 0 4 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_42.jpg?x=229&y=220&w=537&h=448&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_42.jpg"/>
 
 Fig. 22. Object distance calculations per neighbor for $k$ -nearest neighbor query.
 
@@ -1484,7 +1272,7 @@ Fig. 22. Object distance calculations per neighbor for $k$ -nearest neighbor que
 
 <!-- figureText: 40 日龄 -日 - - 8 10 12 14 16 log2(Number of nearest neighbors O cost relative to total cost (%) 35 30 25 20 INN (PG) 15 k-NN (PG) INN (R64K) 10 k-NN (R64K) 5 0 0 6 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_42.jpg?x=847&y=223&w=536&h=446&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_42.jpg"/>
 
 Fig. 23. Fraction of total execution time taken by disk I/Os in computing $k$ -nearest neighbor query.
 
@@ -1512,7 +1300,7 @@ For the R-tree node disk I/Os (Figure 25), we find the same relative behavior of
 
 <!-- figureText: 4 14 15 16 17 18 log2(Number of line segments) Execution time (milliseconds) INN (Real) 3.5 k-NN (Real) INN (Random) 3 k-NN (Random) 2.5 2 1.5 1 0.5 10 11 12 13 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg?x=226&y=223&w=538&h=445&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg"/>
 
 Fig. 24. Execution time for finding one neighbor.
 
@@ -1520,7 +1308,7 @@ Fig. 24. Execution time for finding one neighbor.
 
 <!-- figureText: 8 INN (Real) 14 15 16 17 18 log2(Number of line segments) k-NN (Real) R-tree node disk I/Os INN (Random) 7 k-NN (Random) 6 10 11 12 13 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg?x=861&y=227&w=522&h=442&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg"/>
 
 Fig. 25. R-tree node disk I/O for finding one neighbor.
 
@@ -1528,7 +1316,7 @@ Fig. 25. R-tree node disk I/O for finding one neighbor.
 
 <!-- figureText: 60 14 15 16 log2(Number of line segments) Object distance calculations INN (Real) 55 k-NN (Real) INN (Random) 50 k-NN (Random) 45 40 35 30 10 11 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg?x=231&y=788&w=539&h=446&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg"/>
 
 Fig. 26. Object distance calculations for finding one neighbor.
 
@@ -1536,7 +1324,7 @@ Fig. 26. Object distance calculations for finding one neighbor.
 
 <!-- figureText: Execution time (ms, logscale) 100000 INN 4 6 log(Number of nearest neighbors) 10000 1000 100 1 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg?x=805&y=795&w=572&h=437&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_43.jpg"/>
 
 Fig. 27. Execution time for a large data set.
 
@@ -1576,7 +1364,7 @@ In Section 4.8 we showed that in the worst case, all the data objects must be in
 
 <!-- figureText: R-tree node disk I/Os (logscale) 100000 k-NN INN 3 4 5 6 7 log(Number of nearest neighbors) 10000 1000 100 0 1 2 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_45.jpg?x=226&y=225&w=554&h=429&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_45.jpg"/>
 
 Fig. 28. Node disk I/Os for a large data set.
 
@@ -1584,7 +1372,7 @@ Fig. 28. Node disk I/Os for a large data set.
 
 <!-- figureText: bject distance calculations (logscale k-NN INN 3 4 6 7 log(Number of nearest neighbors) 1e+06 100000 10000 1000 0 1 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_45.jpg?x=821&y=222&w=556&h=433&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_45.jpg"/>
 
 Fig. 29. Object distance calculations for a large data set.
 
@@ -1612,7 +1400,7 @@ High-dimensional data arises in a number of current applications, including mult
 
 <!-- figureText: 500 14 15 16 17 18 log2(Number of line segments) Real 450 Random Priority queue items 400 350 300 250 200 150 10 11 12 13 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_46.jpg?x=226&y=222&w=551&h=446&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_46.jpg"/>
 
 Fig. 30. Maximum queue size for finding the nearest neighbor (i.e., $k = 1$ ).
 
@@ -1620,7 +1408,7 @@ Fig. 30. Maximum queue size for finding the nearest neighbor (i.e., $k = 1$ ).
 
 <!-- figureText: Priority queue items (logscale) INN (PG) 8 10 12 14 16 log2(Number of nearest neighbors 10000 INN (R64K) k-NN 1000 100 10 1 0 2 6 -->
 
-<img src="https://cdn.noedgeai.com/0195c918-72e5-7b1b-ae72-97b2d298d382_46.jpg?x=819&y=229&w=564&h=440&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c918-72e5-7b1b-ae72-97b2d298d382_46.jpg"/>
 
 Fig. 31. Maximum queue size for a wide range of $k$ .
 

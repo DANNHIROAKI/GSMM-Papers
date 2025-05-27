@@ -126,7 +126,7 @@ https://doi.org/10.1145/3299869.3319885
 
 <!-- figureText: vehicle animal mammal oviparous aquatic terrestrial amphibious tiger whale (b) A DAG hierarchy car nissan honda mercedes maxima sentra (a) A tree hierarchy (reconstructed from [15]) -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_1.jpg?x=224&y=231&w=1318&h=258&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_1.jpg"/>
 
 Figure 1: Example hierarchies for human-assisted graph search
 
@@ -258,7 +258,7 @@ Example. To illustrate,suppose that the input DAG $G$ is the graph in Figure 2. 
 
 <!-- figureText: ⑩ ③ -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_2.jpg?x=1121&y=238&w=325&h=322&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_2.jpg"/>
 
 Figure 2: A DAG hierarchy
 
@@ -326,7 +326,7 @@ Now, concatenate heavy edges into maximal paths, i.e., no path can be extended w
 
 <!-- figureText: ① ${\pi }_{1}$ ⑤⑨⑫④ (b) The path-tree $\Pi$ ③ ⑤ ⑥ ⑩ ⑬ (a) A tree $T$ -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_3.jpg?x=978&y=236&w=615&h=376&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_3.jpg"/>
 
 Figure 3: Heavy-path decomposition
 
@@ -334,7 +334,7 @@ Figure 3: Heavy-path decomposition
 
 <!-- figureText: (a) A DFS-tree ⑫ ⑭ (b) Colors when node 3 is discovered on the DAG of Figure 2 -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_3.jpg?x=967&y=677&w=639&h=402&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_3.jpg"/>
 
 Figure 4: White-path theorem
 
@@ -534,56 +534,31 @@ algorithm interleave
 
 ---
 
-1. $\pi  \leftarrow$ the root (super-node) of $\Pi / \star  \pi$ is a path in ${T}^{ * }/$
-
-1. $\pi  \leftarrow$ $\Pi / \star  \pi$的根（超级节点）是${T}^{ * }/$中的一条路径
-
-2. repeat
-
-2. 重复
-
-3. /* navigate in $\Pi$ */
-
-3. /* 在$\Pi$中导航 */
-
+	$\pi  \leftarrow$ the root (super-node) of $\Pi / \star  \pi$ is a path in ${T}^{ * }/$
+	$\pi  \leftarrow$ $\Pi / \star  \pi$的根（超级节点）是${T}^{ * }/$中的一条路径
+	repeat
+	重复
+	/* navigate in $\Pi$ */
+	/* 在$\Pi$中导航 */
 		binary search $\pi$ to find the last node $u$
-
 		对$\pi$进行二分查找，找到最后一个节点$u$
-
 		with reach $\left( u\right)  =$ yes
-
 		其reach $\left( u\right)  =$为真
-
-4. /* navigate in ${T}^{ * }$ /
-
-4. /* 在${T}^{ * }$中导航 */
-
+	/* navigate in ${T}^{ * }$ /
+	/* 在${T}^{ * }$中导航 */
 		find a child $v$ of $u$ in $T$ with reach $\left( v\right)  =$ yes
-
 		在$T$中找到$u$的一个子节点$v$，其reach $\left( v\right)  =$为真
-
 		(note that $v$ cannot be in $\pi$ )
-
 		（注意$v$不能在$\pi$中）
-
-5. if $v$ does not exist then return $u$
-
-5. 如果 $v$ 不存在，则返回 $u$
-
+	if $v$ does not exist then return $u$
+	如果 $v$ 不存在，则返回 $u$
 		else
-
 		否则
-
-6. $\;\pi  \leftarrow$ the (only) super-node in $\Pi$ containing $v$
-
-6. $\;\pi  \leftarrow$ 是 $\Pi$ 中包含 $v$ 的（唯一）超级节点
-
+	$\;\pi  \leftarrow$ the (only) super-node in $\Pi$ containing $v$
+	$\;\pi  \leftarrow$ 是 $\Pi$ 中包含 $v$ 的（唯一）超级节点
 			${/}^{ * }\pi$ is a path in $T$ ,and $v$ must be the first node
-
 			${/}^{ * }\pi$ 是 $T$ 中的一条路径，并且 $v$ 必须是该路径中的第一个节点
-
 			in this path */
-
 			在这条路径中 */
 
 ---
@@ -710,7 +685,7 @@ The resulting $T$ has a nice property: a pre-order traversal of $T$ enumerates t
 
 <!-- figureText: ⑤ ⑩ ⑫ 10 pops out node 4 -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_6.jpg?x=961&y=235&w=646&h=406&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_6.jpg"/>
 
 Figure 5: Computing the heavy-path DFS-tree
 
@@ -746,45 +721,26 @@ algorithm DFS-interleave
 
 算法 深度优先搜索交错
 
-/* $T$ is the heavy-path DFS-tree */
-
-/* $T$ 是重路径深度优先搜索树 */
-
-1. $\widehat{u} \leftarrow$ the root $r$
-
-1. $\widehat{u} \leftarrow$ 根节点 $r$
-
-2. repeat
-
-2. 重复执行
-
-${/}^{ * }$ invariant: $z$ is reachable from $\widehat{u}{}^{ * }$ /
-
-${/}^{ * }$ 不变式：$z$ 可从 $\widehat{u}{}^{ * }$ 到达 /
-
-3. $\;\pi  \leftarrow$ the leftmost $\widehat{u}$ -to-leaf path of $T$
-
-3. $\;\pi  \leftarrow$ $T$ 的最左侧 $\widehat{u}$ 到叶节点的路径
-
-4. binary search $\pi$ to find the last node $u$ with reach $\left( u\right)  =$ yes
-
-4. 二分查找 $\pi$ 以找到可达性 $\left( u\right)  =$ 为“是”的最后一个节点 $u$
-
-5. find the leftmost child $v$ of $u$ in $T$ with $\operatorname{reach}\left( v\right)  =$ yes
-
-5. 在 $T$ 中找到 $u$ 的最左子节点 $v$，其可达性 $\operatorname{reach}\left( v\right)  =$ 为“是”
-
-${\mu }^{ * }$ note that $v$ cannot be in $\pi {}^{ * }$ /
-
-${\mu }^{ * }$ 注意，$v$ 不能在 $\pi {}^{ * }$ 中 /
-
-6. if $v$ does not exist then return $u$
-
-6. 如果 $v$ 不存在，则返回 $u$
-
-7. else $\widehat{u} \leftarrow  v$
-
-7. 否则 $\widehat{u} \leftarrow  v$
+	/* $T$ is the heavy-path DFS-tree */
+	/* $T$ 是重路径深度优先搜索树 */
+		$\widehat{u} \leftarrow$ the root $r$
+		$\widehat{u} \leftarrow$ 根节点 $r$
+		repeat
+		重复执行
+	${/}^{ * }$ invariant: $z$ is reachable from $\widehat{u}{}^{ * }$ /
+	${/}^{ * }$ 不变式：$z$ 可从 $\widehat{u}{}^{ * }$ 到达 /
+		$\;\pi  \leftarrow$ the leftmost $\widehat{u}$ -to-leaf path of $T$
+		$\;\pi  \leftarrow$ $T$ 的最左侧 $\widehat{u}$ 到叶节点的路径
+		binary search $\pi$ to find the last node $u$ with reach $\left( u\right)  =$ yes
+		二分查找 $\pi$ 以找到可达性 $\left( u\right)  =$ 为“是”的最后一个节点 $u$
+		find the leftmost child $v$ of $u$ in $T$ with $\operatorname{reach}\left( v\right)  =$ yes
+		在 $T$ 中找到 $u$ 的最左子节点 $v$，其可达性 $\operatorname{reach}\left( v\right)  =$ 为“是”
+	${\mu }^{ * }$ note that $v$ cannot be in $\pi {}^{ * }$ /
+	${\mu }^{ * }$ 注意，$v$ 不能在 $\pi {}^{ * }$ 中 /
+		if $v$ does not exist then return $u$
+		如果 $v$ 不存在，则返回 $u$
+		else $\widehat{u} \leftarrow  v$
+		否则 $\widehat{u} \leftarrow  v$
 
 Example. We illustrate the algorithm by setting $G$ to the graph in Figure 5a,whose heavy-path DFS-tree $T$ is shown in Figure 5b. Suppose that the adversary has secretly chosen the target node $z$ to be node 9 .
 
@@ -1044,7 +1000,7 @@ We repeated the same experiment on ImageNet, using DFS-interleave and top-down a
 
 <!-- figureText: number of questions 120 ordered-interleave ${10}^{5}$ ordered-interleave top-down average CSS ${10}^{4}$ ${10}^{3}$ ${10}^{2}$ 10 20 40 60 80 100 120 140 160 180 240 number of questions (b) Progressiveness (c) Cost vs. sum of out-degrees of ancestors Figure 6: IGS on Amazon (i.e., $k = 1$ ) ${10}^{5}$ DFS-interleave top-down average CSS ${10}^{4}$ ${10}^{3}$ ${10}^{2}$ 10 30 60 90 120 1 180 210 240 number of questions (b) Progressiveness (398,435 (472,509 (509,546) (546,583) (583,620) (620,657 (657,694 (694,731 sum of out-degrees of ancestors (c) Cost vs. sum of out-degrees of ancestors top-down 100 80 60 40 20 node depth (a) Cost vs. node depth 200 ordered-interleave top-down number of questions 150 100 50 0 number of questions 200 DFS-interleave 180 top-down 160 140 120 100 80 60 40 20 2 3 7 8 9 10 11 12 node depth (a) Cost vs. node depth DFS-interleave number of questions top-down 200 150 100 0 [28,65] (65,102] (102,139) (139,176 (176,213] (213,250 (250,287) (287,324 (324,36 -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_10.jpg?x=262&y=280&w=1255&h=1394&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_10.jpg"/>
 
 Figure 7: IGS on ImageNet (i.e., $k = 1$ )
 
@@ -1460,7 +1416,7 @@ Proof. Call node $u$ a pivot node. Also,let us refer to Lines 3-7 as an iteratio
 
 <!-- figureText: 50 ${10}^{5}$ ordered-interleave top-down average CSS ${10}^{4}$ ${10}^{3}$ ${10}^{2}$ 10 10 15 20 25 30 35 40 45 50 number of k-questions (b) Progressiveness (228,244] (276,292 (292,308) (308,324) (324,340) (340,356 (356,372 (372,388 (388,404) sum of out-degrees of ancestors (c) Cost vs. sum of out-degrees of ancestors Figure 9: $k$ -IGS on Amazon with $k = 5$ ${10}^{5}$ DFS-interleave top-down average CSS ${10}^{4}$ ${10}^{3}$ ${10}^{2}$ 10 10 20 30 40 50 60 70 80 number of k-questions (b) Progressiveness (398,435 (472,509 (509,546] (546,583 (583,620) (620,657) (657,694 (694,731) sum of out-degrees of ancestors (c) Cost vs. sum of out-degrees of ancestors number of k-questions ordered-interleave top-down 30 20 10 0 1 2 4 5 6 7 8 9 node depth (a) Cost vs. node depth 45 ordered-interleave number of k-questions top-down 25 5 (116,132 (132,148 (148,164) (164,180] (180,196 (196,212) (212,228) 45 number of k -questions DFS-interleave top-down 30 25 20 15 10 2 8 9 10 node depth (a) Cost vs. node depth 60 DFS-interleave number of k-questions top-down [28,65] (65,102] (102,139) (139,176 (176,213] (213,250) (250,287] (287,324) (324,361 (361,398) -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_16.jpg?x=262&y=281&w=1254&h=1378&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_16.jpg"/>
 
 Figure 10: $k$ -IGS on ImageNet with $k = 5$
 
@@ -1488,7 +1444,7 @@ By the way our algorithm runs,we know that $\widehat{u}$ is the leftmost child $
 
 <!-- figureText: number of k-questions ordered-interleave number of k-questions 140 DFS-interleave 120 top-down 100 80 60 40 20 1 2 9 10 k (b) ImageNet top-down 1 2 3 6 7 8 9 10 (a) Amazon -->
 
-<img src="https://cdn.noedgeai.com/0195c91c-378f-77b0-8d6e-bb14508995e7_17.jpg?x=292&y=297&w=1189&h=347&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c91c-378f-77b0-8d6e-bb14508995e7_17.jpg"/>
 
 Figure 11: $k$ -IGS: Cost vs. $k$
 

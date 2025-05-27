@@ -238,7 +238,7 @@ ${}^{3}{DB}$ 离群值在我们的前期工作 [KN97] 中被称为统一离群�
 
 <!-- figureText: FindOutliers nhl94.data p=0.998 D=29.6985 POINTS PLUSMINUS PENALTY_MINUTES 1) Name = VLAD KONSTANTINOV, POINTS = 34, PLUSMINUS = 60, PENALTY_MINUTES = 139 2) Name = MARIO LEMIEUX, GAMES_PLAYED = 70, GOALS = 69, SHOOTING_PERCENTAGE = 20.4 indOutliers nh196.normalized. 0to1 p=0.996 D=0.447214 GAMES_PLAYED POWER_PLAY_GOALS SHORTHANDED_GOALS = 5, GAME_WINNING_GOALS = 6, GAME_TIEING_GOALS = 3 SHORTHANDED_GOALS = 8, GAME_WINNING_GOALS = 8, GAME_TIEING_GOALS = 0 1) Name = WAYNE GRETZKY, POINTS = 130, PLUSMINUS = -25, PENALTY_MINUTES = 20 2) Name = SERGEI FEDOROV, POINTS = 120, PLUSMINUS = 48, PENALTY_MINUTES = 34 indOutliers nh196.data p=0.998 D=26.3044 POINTS PLUSMINUS PENALTY_MINUTES findOutliers nhl96.data p=0.997 D=5 GAMES_PLAYED GOALS SHOOTING_PERCENTAGE 1) Name = CHRIS OSGOOD, GAMES_PLAYED = 50, GOALS = 1, SHOOTING_PERCENTAGE = 100. SHORTHANDED_GOALS GAME_WINNING_GOALS GAME_TIEING_GOALS 1) Name = ALEXANDER MOGILNY, GAMES_PLAYED = 79, POWER_PLAY_GOALS = 10, 2 Name = MARIO LEMIEUX, GAMES_PLAYED = 70, POWER_PLAY_GOALS = 31, -->
 
-<img src="https://cdn.noedgeai.com/0195c913-c64b-73be-a45d-3920f48f6845_3.jpg?x=280&y=193&w=1120&h=477&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c913-c64b-73be-a45d-3920f48f6845_3.jpg"/>
 
 <!-- Media -->
 
@@ -916,7 +916,7 @@ Figure 5 shows results for various modes and various dataset sizes for 3-D,using
 
 <!-- figureText: 2000 CPU + I/O Time versus Number of Tuples, for 3-D Modes AT (total) AT (build) CS 1.8 Number of Tuples 1800 CPU + I/O Time in Seconds -->
 
-<img src="https://cdn.noedgeai.com/0195c913-c64b-73be-a45d-3920f48f6845_9.jpg?x=940&y=214&w=607&h=496&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c913-c64b-73be-a45d-3920f48f6845_9.jpg"/>
 
 Figure 5: How CPU + I/O Time Scales with $N$ for 3-D Disk-Resident Datasets,Using $p = {0.9999}$
 
@@ -964,7 +964,7 @@ ${}^{8}$ 我们将黄色单元格归为白色单元格，因为黄色单元格�
 
 <!-- figureText: 80 Percentage of Total Number of Celle versus p Type of Cell: White Non-Empty White Pink Red 0.9975 0.998 0.9985 0.999 0.9995 Percentage of Total Number of Cells 70 80 30 0.995 0.9955 0.996 0.9965 0.997 -->
 
-<img src="https://cdn.noedgeai.com/0195c913-c64b-73be-a45d-3920f48f6845_10.jpg?x=231&y=235&w=608&h=497&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c913-c64b-73be-a45d-3920f48f6845_10.jpg"/>
 
 Figure 6: 3-D Cell Colouring Statistics for Variable $p$ , for 500,000 Tuples
 

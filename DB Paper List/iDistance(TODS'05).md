@@ -242,9 +242,9 @@ In other words,in partition ${P}_{i}$ ,we need only examine candidate points $p$
 
 换句话说，在分区 ${P}_{i}$ 中，我们只需检查候选点 $p$，这些候选点与参考点 $\operatorname{dist}\left( {{O}_{i},p}\right)$ 的距离受此不等式约束，该不等式通常指定了一个围绕参考点的圆环区域。
 
-Let dist_ma ${x}_{i}$ be the distance between ${O}_{i}$ and the point furthest from it in partition ${P}_{i}$ . That is,let ${P}_{i}$ have a radius of dist_ma ${x}_{i}$ . If $\operatorname{dist}\left( {{O}_{i},q}\right)$ -querydist $\left( q\right)  \leq$ dist_ma ${x}_{i}$ ,then ${P}_{i}$ has to be searched for NN points,else we can eliminate this partition from consideration altogether. The range to be searched within an affected partition in the single dimensional space is $\left\lbrack  {\operatorname{dist}\left( {{0}_{i},q}\right)  - }\right.$ querydist(q), $\min \left( {{\text{dist_max}}_{i},\text{dist}\left( {{O}_{i},q}\right)  + \text{querydist}\left( q\right) }\right) \rbrack$ . Figure 2 shows an example where the partitions are formed based on data clusters (the data partitioning strategy will be discussed in detail in Section 4.2). Here,for query point $q$ and query radius $r$ ,partitions ${P}_{1}$ and ${P}_{2}$ need to be searched,while partition ${P}_{3}$ need not.
+Let dist_ma ${x}_{i}$ be the distance between ${O}_{i}$ and the point furthest from it in partition ${P}_{i}$ . That is,let ${P}_{i}$ have a radius of dist_ma ${x}_{i}$ . If $\operatorname{dist}\left( {{O}_{i},q}\right)$ -querydist $\left( q\right)  \leq$ dist_ma ${x}_{i}$ ,then ${P}_{i}$ has to be searched for NN points,else we can eliminate this partition from consideration altogether. The range to be searched within an affected partition in the single dimensional space is $\left\lbrack  {\operatorname{dist}\left( {{0}_{i},q}\right)  - }\right.$ querydist(q), $\min \left( {{\text{dist\_max}}_{i},\text{dist}\left( {{O}_{i},q}\right)  + \text{querydist}\left( q\right) }\right) \rbrack$ . Figure 2 shows an example where the partitions are formed based on data clusters (the data partitioning strategy will be discussed in detail in Section 4.2). Here,for query point $q$ and query radius $r$ ,partitions ${P}_{1}$ and ${P}_{2}$ need to be searched,while partition ${P}_{3}$ need not.
 
-设 dist_ma ${x}_{i}$ 为 ${O}_{i}$ 与分区 ${P}_{i}$ 中距离它最远的点之间的距离。也就是说，设 ${P}_{i}$ 的半径为 dist_ma ${x}_{i}$。如果 $\operatorname{dist}\left( {{O}_{i},q}\right)$ - 查询距离 $\left( q\right)  \leq$ > dist_ma ${x}_{i}$，则必须在 ${P}_{i}$ 中搜索最近邻（NN）点，否则我们可以完全不考虑这个分区。在一维空间中受影响的分区内需要搜索的范围是 $\left\lbrack  {\operatorname{dist}\left( {{0}_{i},q}\right)  - }\right.$ 查询距离(q)，$\min \left( {{\text{dist_max}}_{i},\text{dist}\left( {{O}_{i},q}\right)  + \text{querydist}\left( q\right) }\right) \rbrack$。图 2 展示了一个基于数据簇形成分区的示例（数据分区策略将在 4.2 节详细讨论）。这里，对于查询点 $q$ 和查询半径 $r$，需要搜索分区 ${P}_{1}$ 和 ${P}_{2}$，而无需搜索分区 ${P}_{3}$。
+设 dist_ma ${x}_{i}$ 为 ${O}_{i}$ 与分区 ${P}_{i}$ 中距离它最远的点之间的距离。也就是说，设 ${P}_{i}$ 的半径为 dist_ma ${x}_{i}$。如果 $\operatorname{dist}\left( {{O}_{i},q}\right)$ - 查询距离 $\left( q\right)  \leq$ > dist_ma ${x}_{i}$，则必须在 ${P}_{i}$ 中搜索最近邻（NN）点，否则我们可以完全不考虑这个分区。在一维空间中受影响的分区内需要搜索的范围是 $\left\lbrack  {\operatorname{dist}\left( {{0}_{i},q}\right)  - }\right.$ 查询距离(q)，$\min \left( {{\text{dist\_max}}_{i},\text{dist}\left( {{O}_{i},q}\right)  + \text{querydist}\left( q\right) }\right) \rbrack$。图 2 展示了一个基于数据簇形成分区的示例（数据分区策略将在 4.2 节详细讨论）。这里，对于查询点 $q$ 和查询半径 $r$，需要搜索分区 ${P}_{1}$ 和 ${P}_{2}$，而无需搜索分区 ${P}_{3}$。
 
 <!-- Media -->
 
@@ -252,7 +252,7 @@ Leaf nodes of ${\mathrm{B}}^{ + }$ -tree
 
 ${\mathrm{B}}^{ + }$ - 树的叶节点
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_8.jpg?x=540&y=337&w=900&h=551&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_8.jpg"/>
 
 Fig. 2. Search regions for NN query $q$ .
 
@@ -308,7 +308,7 @@ where $c$ is a constant used to stretch the data ranges. Essentially, $c$ serves
 
 <!-- figureText: ${\mathrm{O}}_{0}\left( {{0.0},{0.5}}\right)$ ${\mathrm{O}}_{3}\left( {{0.5},{1.0}}\right)$ D. ${\mathrm{O}}_{2}({1.0},{0.5}$ O $1/\left( {{0.5},{0.0}}\right)$ D ${\mathrm{c}}_{3}$ ${\mathrm{c}}_{4}$ A C0 -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_9.jpg?x=489&y=334&w=850&h=973&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_9.jpg"/>
 
 Fig. 3. Mapping of data points.
 
@@ -352,9 +352,9 @@ end iDistanceKNN;
 
 iDistanceKNN结束;
 
-	Fig. 4. iDistance KNN main search algorithm.
+Fig. 4. iDistance KNN main search algorithm.
 
-	图4. iDistance最近邻主搜索算法。
+图4. iDistance最近邻主搜索算法。
 
 ---
 
@@ -369,96 +369,55 @@ iDistanceKNN结束;
 ---
 
 		${p}_{\text{furthest }} =$ furthest(S,q)
-
 		${p}_{\text{furthest }} =$ 为S中距离q最远的点
-
 		if $\operatorname{dist}\left( {{p}_{\text{furthest }},q}\right)  < r$ and $\left| S\right|  =  = K$
-
 		如果 $\operatorname{dist}\left( {{p}_{\text{furthest }},q}\right)  < r$ 且 $\left| S\right|  =  = K$
-
 				Stopflag $=$ TRUE;
-
 				停止标志 $=$ 设为真;
-
 					/* need to continue searching for correctness sake before stop*/
-
 					/* 在停止前为保证正确性需要继续搜索 */
-
 			for $i = 0$ to $m - 1$
-
 			从 $i = 0$ 到 $m - 1$
-
 				dis $= \operatorname{dist}\left( {{O}_{i},q}\right)$ ;
-
 				距离 $= \operatorname{dist}\left( {{O}_{i},q}\right)$ ;
-
 				if not of $\log \left\lbrack  i\right\rbrack  / *$ if ${O}_{i}$ has not been searched before $* /$
-
 				如果 $\log \left\lbrack  i\right\rbrack  / *$ 不满足条件 且 ${O}_{i}$ 之前未被搜索过 $* /$
-
-					if $\operatorname{sphere}\left( {{O}_{i},{\text{ dist_max }}_{i}}\right)$ contains $q$
-
-					如果 $\operatorname{sphere}\left( {{O}_{i},{\text{ dist_max }}_{i}}\right)$ 包含 $q$
-
+					if $\operatorname{sphere}\left( {{O}_{i},{\text{ dist\_max }}_{i}}\right)$ contains $q$
+					如果 $\operatorname{sphere}\left( {{O}_{i},{\text{ dist\_max }}_{i}}\right)$ 包含 $q$
 							of $\log \left\lbrack  i\right\rbrack   =$ TRUE;
-
 							$\log \left\lbrack  i\right\rbrack   =$ 为真；
-
 							Inode $=$ LocateLeaf(btree, $i * c + {dis}$ );
-
 							索引节点 $=$ 定位叶子节点(btree, $i * c + {dis}$ );
-
 							${lp}\left\lbrack  i\right\rbrack   =$ SearchInward $\left( {\text{lnode,}i * c + \text{dis} - r}\right)$ ;
-
 							${lp}\left\lbrack  i\right\rbrack   =$ 向内搜索 $\left( {\text{lnode,}i * c + \text{dis} - r}\right)$ ;
-
 							${rp}\left\lbrack  i\right\rbrack   =$ SearchOutward $\left( {\text{ lnode },i * c + \text{ dis } + r}\right) ;$
-
 							${rp}\left\lbrack  i\right\rbrack   =$ 向外搜索 $\left( {\text{ lnode },i * c + \text{ dis } + r}\right) ;$
-
-					else if $\operatorname{sphere}\left( {{O}_{i},{\text{ dist_max }}_{i}}\right.$ ) intersects sphere(q,r)
-
-					否则，如果 $\operatorname{sphere}\left( {{O}_{i},{\text{ dist_max }}_{i}}\right.$ 与球体(q,r)相交
-
+					else if $\operatorname{sphere}\left( {{O}_{i},{\text{ dist\_max }}_{i}}\right.$ ) intersects sphere(q,r)
+					否则，如果 $\operatorname{sphere}\left( {{O}_{i},{\text{ dist\_max }}_{i}}\right.$ 与球体(q,r)相交
 							of $\operatorname{lag}\left\lbrack  i\right\rbrack   =$ TRUE;
-
 							$\operatorname{lag}\left\lbrack  i\right\rbrack   =$ 为真；
-
-							Inode $=$ LocateLeaf(btree,dist_max ${}_{i}$ );
-
+							Inode $=$ LocateLeaf(btree,dist\_max ${}_{i}$ );
 							索引节点 $=$ 定位叶子节点(btree,最大距离 ${}_{i}$ );
-
 							${lp}\left\lbrack  i\right\rbrack   =$ SearchInward $\left( {\text{lnode,}i * c + \text{dis} - r}\right)$ ;
-
 							${lp}\left\lbrack  i\right\rbrack   =$ 向内搜索 $\left( {\text{lnode,}i * c + \text{dis} - r}\right)$ ;
-
 				else
-
 				否则
-
 					if ${lp}\left\lbrack  i\right\rbrack$ not nil
-
 					如果 ${lp}\left\lbrack  i\right\rbrack$ 不为空
-
 						${lp}\left\lbrack  i\right\rbrack   =$ SearchInward $\left( {{lp}\left\lbrack  i\right\rbrack   \rightarrow  \text{leftnode,}i * c + {dis} - r}\right)$ ;
-
 						${lp}\left\lbrack  i\right\rbrack   =$ 向内搜索 $\left( {{lp}\left\lbrack  i\right\rbrack   \rightarrow  \text{leftnode,}i * c + {dis} - r}\right)$ ;
-
 					if ${rp}\left\lbrack  i\right\rbrack$ not nil
-
 					如果 ${rp}\left\lbrack  i\right\rbrack$ 不为空
+					${rp}\left\lbrack  i\right\rbrack   =$ SearchOutward $\left( {{rp}\left\lbrack  i\right\rbrack   \rightarrow  \text{ rightnode },i * c + {dis} + r}\right) ;$
+					${rp}\left\lbrack  i\right\rbrack   =$ 向外搜索 $\left( {{rp}\left\lbrack  i\right\rbrack   \rightarrow  \text{ rightnode },i * c + {dis} + r}\right) ;$
+	
+			end SearchO;
+			搜索O结束;
 
-22. ${rp}\left\lbrack  i\right\rbrack   =$ SearchOutward $\left( {{rp}\left\lbrack  i\right\rbrack   \rightarrow  \text{ rightnode },i * c + {dis} + r}\right) ;$
 
-22. ${rp}\left\lbrack  i\right\rbrack   =$ 向外搜索 $\left( {{rp}\left\lbrack  i\right\rbrack   \rightarrow  \text{ rightnode },i * c + {dis} + r}\right) ;$
+Fig. 5. iDistance KNN search algorithm: SearchO.
 
-end SearchO;
-
-搜索O结束;
-
-					Fig. 5. iDistance KNN search algorithm: SearchO.
-
-					图5. iDistance最近邻搜索算法：搜索O。
+图5. iDistance最近邻搜索算法：搜索O。
 
 ---
 
@@ -493,58 +452,34 @@ SearchInward(node, ivalue)
 ---
 
 	for each entry $e$ in node $\left( {e = {e}_{j},j = 1,2,\ldots ,{Number}\_ {of}\_ \text{entries}}\right)$
-
 	  对于节点$\left( {e = {e}_{j},j = 1,2,\ldots ,{Number}\_ {of}\_ \text{entries}}\right)$中的每个条目$e$
-
 		if $\left| S\right|  =  = K$
-
 		  如果$\left| S\right|  =  = K$
-
 			${p}_{\text{furthest }} =$ furthest(S,q);
-
 			  ${p}_{\text{furthest }} =$ 最远（S，q）；
-
 			if $\operatorname{dist}\left( {e,q}\right)  < \operatorname{dist}\left( {{p}_{\text{furthest }},q}\right)$
-
 			  如果$\operatorname{dist}\left( {e,q}\right)  < \operatorname{dist}\left( {{p}_{\text{furthest }},q}\right)$
-
 					$S = S - {p}_{\text{furthest }};$
-
 					$S = S \cup  e$
-
 		else
-
 		  否则
-
 				$S = S \cup  e$
-
 		if ${e}_{1}$ .key $>$ ivalue
-
 		  如果${e}_{1}$.键 $>$ 整数值
-
 			node $=$ SearchInward $\left( {\text{node} \rightarrow  \text{leftnode,}i * c + {dis} - r}\right)$ ;
-
 			  节点 $=$ 向内搜索 $\left( {\text{node} \rightarrow  \text{leftnode,}i * c + {dis} - r}\right)$ ；
-
 	if end of partition is reached
-
 	  如果到达分区末尾
-
 		node = nil;
-
 		  节点 = 空；
-
 		return(node);
-
 		  返回（节点）；
+		and SearchInward;
+		以及向内搜索（SearchInward）
 
-and SearchInward;
+Fig. 6. iDistance KNN search algorithm: SearchInward.
 
-以及向内搜索（SearchInward）；
-
-		Fig. 6. iDistance KNN search algorithm: SearchInward.
-
-		图 6. iDistance K 近邻（KNN）搜索算法：向内搜索（SearchInward）。
+图 6. iDistance K 近邻（KNN）搜索算法：向内搜索（SearchInward）。
 
 ---
 
@@ -554,9 +489,9 @@ Before we explain the main concept of the algorithm iDistanceKNN, let us discuss
 
 在解释 iDistanceKNN 算法的主要概念之前，我们先讨论三个重要的子程序。注意，子程序“向内搜索（SearchInward）”和“向外搜索（SearchOutward）”彼此相似，因此我们仅解释“向内搜索（SearchInward）”子程序。给定一个叶节点，“向内搜索（SearchInward）”子程序会向左检查该节点的条目，以确定它们是否属于 $K$ 近邻，并相应地更新答案。我们注意到，由于 iDistance 是有损的，具有相同值的点实际上可能彼此并不接近——有些可能更接近 $q$，而有些则离它很远。如果节点的第一个元素（对于“向外搜索（SearchOutward）”则是最后一个元素）包含在查询球内，那么相对于参考点的距离而言，它的前一个元素（对于“向外搜索（SearchOutward）”则是后一个元素）也可能接近 $q$。因此，会检查左兄弟节点（对于“向外搜索（SearchOutward）”则是右兄弟节点）。换句话说，“向内搜索（SearchInward）”（“向外搜索（SearchOutward）”）是朝着（远离）分区的参考点搜索空间。让我们再次考虑图 2 所示的示例。对于查询点 $q$，在分区 ${P}_{1}$ 上进行的“向内搜索（SearchInward）”将按照箭头 A 的方向向左兄弟节点搜索，而“向外搜索（SearchOutward）”将按照箭头 B 的方向向右兄弟节点搜索。对于分区 ${P}_{2}$，我们仅按照箭头 $C$ 的方向通过“向内搜索（SearchInward）”向左兄弟节点搜索。“定位叶节点（LocateLeaf）”子程序是一种典型的 ${B}^{ + }$ 树遍历算法，它根据搜索值定位叶节点，因此省略该算法的详细描述。它要么根据 $q$ 的相应值，要么根据正在搜索的分区的最大半径来定位叶节点。
 
-We now explain the search algorithm. Searching in iDistance begins by scanning the auxiliary structure to identify the reference points, ${O}_{i}$ ,whose data spaces intersect the query region. For a partition that needs to be searched, the starting search point must be located. If $q$ is contained inside the data sphere, the iDistance value of $q$ (obtained based on Equation 5) is used directly,else ${\text{dist_max}}_{i}$ is used. The search starts with a small radius. In our implementation, we just use ${\Delta r}$ as the initial search radius. Then the search radius is increased by ${\Delta r}$ ,step by step,to form a larger query sphere. For each enlargement,there are three cases to consider.
+We now explain the search algorithm. Searching in iDistance begins by scanning the auxiliary structure to identify the reference points, ${O}_{i}$ ,whose data spaces intersect the query region. For a partition that needs to be searched, the starting search point must be located. If $q$ is contained inside the data sphere, the iDistance value of $q$ (obtained based on Equation 5) is used directly,else ${\text{dist\_max}}_{i}$ is used. The search starts with a small radius. In our implementation, we just use ${\Delta r}$ as the initial search radius. Then the search radius is increased by ${\Delta r}$ ,step by step,to form a larger query sphere. For each enlargement,there are three cases to consider.
 
-现在我们来解释搜索算法。iDistance 中的搜索首先扫描辅助结构，以确定其数据空间与查询区域相交的参考点 ${O}_{i}$。对于需要搜索的分区，必须确定起始搜索点。如果 $q$ 包含在数据球内，则直接使用 $q$ 的 iDistance 值（根据公式 5 获得），否则使用 ${\text{dist_max}}_{i}$。搜索从一个小半径开始。在我们的实现中，我们仅使用 ${\Delta r}$ 作为初始搜索半径。然后，搜索半径逐步增加 ${\Delta r}$，以形成一个更大的查询球。对于每次扩大，需要考虑三种情况。
+现在我们来解释搜索算法。iDistance 中的搜索首先扫描辅助结构，以确定其数据空间与查询区域相交的参考点 ${O}_{i}$。对于需要搜索的分区，必须确定起始搜索点。如果 $q$ 包含在数据球内，则直接使用 $q$ 的 iDistance 值（根据公式 5 获得），否则使用 ${\text{dist\_max}}_{i}$。搜索从一个小半径开始。在我们的实现中，我们仅使用 ${\Delta r}$ 作为初始搜索半径。然后，搜索半径逐步增加 ${\Delta r}$，以形成一个更大的查询球。对于每次扩大，需要考虑三种情况。
 
 (1) The partition contains the query point, $q$ . In this case,we want to traverse the partition sufficiently to determine the $K$ nearest neighbors. This can be done by first locating the leaf node whereby $q$ may be stored (Recall that this node does not necessarily contain points whose distance is closest to $q$ compared to its sibling nodes),and searching inward or outward of the reference point accordingly. For the example shown in Figure 2,only ${P}_{1}$ is examined in the first iteration and $q$ is used to traverse down the ${\mathrm{B}}^{ + }$ -tree.
 
@@ -594,7 +529,7 @@ A straightforward approach to data space partitioning is to subdivide the space 
 
 <!-- figureText: ${\mathrm{O}}_{3}\left( {{0.5},{1.0}}\right)$ ${\mathrm{O}}_{3}$ ${\mathrm{O}}_{2}\left( {{1.0},{0.5}}\right)$ ${\mathrm{O}}_{0}$ (b) Effective search space ${\mathrm{O}}_{0}\left( {{0.0},{0.5}}\right)$ ${\mathrm{O}}_{1}\left( {{0.5},{0.0}}\right)$ (a) Space partitioning -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_13.jpg?x=372&y=334&w=1085&h=529&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_13.jpg"/>
 
 Fig. 7. Using (centers of hyperplanes, closest distance) as reference point.
 
@@ -630,7 +565,7 @@ ${}^{1}$ 我们注意到该空间与金字塔技术 [Berchtold 等人，1998a] �
 
 <!-- figureText: Furthest points from O 1 O. The bounding area by these arches are the affected searching area of $\mathrm{{kNN}}\left( {\mathrm{Q},\mathrm{r}}\right)$ . (b) Effect of reduction on query space are located in this area. ${\mathrm{O}}_{2}$ ${\mathrm{O}}_{0}$ ${\mathrm{O}}_{1}$ (a) Space partitioning -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_14.jpg?x=372&y=337&w=1057&h=568&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_14.jpg"/>
 
 Fig. 8. Using (center of hyperplane, furthest distance) as reference point.
 
@@ -664,7 +599,7 @@ ${}^{2}$ 我们注意到其他两个参考点实际上是这种情况的特殊�
 
 <!-- Media -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_15.jpg?x=452&y=332&w=925&h=900&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_15.jpg"/>
 
 Fig. 9. Space partitioning under (external point, closest distance)-based reference point.
 
@@ -692,7 +627,7 @@ Once the clusters are obtained, we need to select the reference points. Again, w
 
 <!-- figureText: 10.70 ${\mathrm{O}}_{1} : \left( {{0.20},{0.70}}\right)$ O’:(0.67,0.31) 0.67 0.31 0.20 -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_16.jpg?x=568&y=338&w=665&h=554&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_16.jpg"/>
 
 Fig. 10. Cluster centers and reference points.
 
@@ -700,7 +635,7 @@ Fig. 10. Cluster centers and reference points.
 
 <!-- figureText: 0.70 0.67 ${\mathrm{O}}_{2} : \left( {1,0}\right)$ 0.31 0 0.20 -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_16.jpg?x=573&y=979&w=651&h=620&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_16.jpg"/>
 
 Fig. 11. Cluster edge points as reference points.
 
@@ -720,7 +655,7 @@ In short, overlap of partitioning spheres can lead to more intersections by the 
 
 <!-- figureText: ${k}_{1}$ ${k}_{2}$ ${O}_{i}$ $q$ -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_17.jpg?x=629&y=339&w=570&h=403&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_17.jpg"/>
 
 Fig. 12. Histogram-based cost model.
 
@@ -742,7 +677,7 @@ Figure 12 shows an example of how to estimate the page access cost for a partiti
 
 <!-- Media -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_18.jpg?x=704&y=339&w=398&h=396&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_18.jpg"/>
 
 Fig. 13. Histogram-based cost model, query sphere inside the partition.
 
@@ -778,7 +713,7 @@ We implemented the iDistance technique and associated search algorithms in $\mat
 
 <!-- figureText: 0.9 0.5 0.6 0.7 0.8 0.9 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.1 0.1 0.2 0.3 0.4 -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_19.jpg?x=547&y=335&w=729&h=710&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_19.jpg"/>
 
 Fig. 14. Distribution of the clustered data.
 
@@ -802,7 +737,7 @@ In our evaluation, we use the number of page accesses and the total response tim
 
 <!-- figureText: 4500 200 space-based Total response time (millisec) data-based ----X- seq. scan --- ※··· 150 100 5 10 15 20 25 30 Dimensionality (b) Total response time 4000 space-based data-based ----X- 3500 seq. scan ---米··· Page accesses 3000 2500 2000 1500 1000 500 10 15 20 25 30 Dimensionality (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_20.jpg?x=364&y=341&w=1078&h=412&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_20.jpg"/>
 
 Fig. 15. Space-based partitioning vs. data-based partitioning, uniform data.
 
@@ -830,7 +765,7 @@ In Section 4.1, we discussed using external point as the reference points of the
 
 <!-- figureText: 4500 space-based Total response time (millisec) data-based ----X- seq. scan ...*... 10 15 20 25 30 Dimensionality (b) Total response time 4000 space-based data-based ----x- 3500 seq. scar Page accesses 3000 2500 2000 1500 1000 500 5 10 20 25 Dimensionality (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_21.jpg?x=375&y=341&w=1079&h=408&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_21.jpg"/>
 
 Fig. 16. Space-based partitioning vs. data-based partitioning, clustered data.
 
@@ -838,7 +773,7 @@ Fig. 16. Space-based partitioning vs. data-based partitioning, clustered data.
 
 <!-- figureText: 4500 200 hyperplane center Total response time (millisec) external point ---x- further external point seq. scan ………… 150 100 50 0 10 15 20 25 30 Dimensionality (b) Total response time 4000 hyperplane center external 3500 further external point --- 米··· Page accesses 3000 2500 2000 1500 1000 500 5 10 20 25 Dimensionality (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_21.jpg?x=375&y=846&w=1079&h=415&r=0"/>
+![image-20250420193024231](https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/image-20250420193024231.png)
 
 Fig. 17. Effect of reference points in space-based partitioning, uniform data.
 
@@ -858,7 +793,7 @@ From the above results, we can see that the data-based partitioning scheme is al
 
 <!-- figureText: 2000 200 Total response time (millisec) 100 iDistance $\rightarrow$ seq. scan ---x--- 0 20 40 60 80 100 120 140 Number of reference points (b) Total response time 1500 Page accesses 1000 500 iDistance — seq. scan ---x--- 20 40 60 80 100 120 140 Number of reference points (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_22.jpg?x=364&y=337&w=1079&h=414&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_22.jpg"/>
 
 Fig. 18. Effects of number of reference points, uniform data.
 
@@ -890,7 +825,7 @@ The second experiment studies the effect of $K$ on the performance of iDistance.
 
 <!-- figureText: 2000 iDistance Total response time (millisec) seq. scan ---x-- 15 20 25 30 35 40 45 50 K (b) Total response time 1500 Page accesses 1000 iDistance seq. scan 500 10 15 20 25 30 40 45 (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_23.jpg?x=375&y=341&w=1079&h=410&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_23.jpg"/>
 
 Fig. 19. Effects of $K$ ,uniform data.
 
@@ -898,7 +833,7 @@ Fig. 19. Effects of $K$ ,uniform data.
 
 <!-- figureText: 8000 800 700 iDistance Total response time (millisec) 500 400 200 100 100 150 200 250 300 350 400 450 500 Dataset size (thousand) (b) Total response time 7000 iDistance seq. scan ---x--- 6000 Page accesses 5000 4000 2000 1000 100 150 200 250 300 350 400 450 500 Dataset size (thousand) (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_23.jpg?x=375&y=829&w=1078&h=418&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_23.jpg"/>
 
 Fig. 20. Effects of dataset size, uniform data.
 
@@ -918,7 +853,7 @@ The fourth experiment examines the effect of the ${\Delta r}$ in the iDistance K
 
 <!-- figureText: 2000 140 Total response time (millisec) 120 100 80 K=10 60 40 20 0.02 0.04 0.06 0.08 0.1 0.12 0.14 0.16 Delta r (b) Total response time 1500 Page accesses 1000 K=10 500 0.02 0.04 0.06 0.08 0.1 0.12 0.14 0.16 Delta r (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_24.jpg?x=364&y=335&w=1079&h=418&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_24.jpg"/>
 
 Fig. 21. Effects of ${\Delta r}$ ,uniform data.
 
@@ -926,7 +861,7 @@ Fig. 21. Effects of ${\Delta r}$ ,uniform data.
 
 <!-- figureText: 3000 200 Total response time (millisec) 150 100 iDistance 50 20 40 60 80 100 120 140 Number of reference points (b) Total response time 2500 Page accesses 2000 1500 iDistance 1000 500 20 40 60 80 100 120 140 Number of reference points (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_24.jpg?x=362&y=831&w=1080&h=418&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_24.jpg"/>
 
 Fig. 22. Effects of number of reference points, clustered data.
 
@@ -946,7 +881,7 @@ For the clustered datasets, we also study the effect of the number of the refere
 
 <!-- figureText: 3000 200 Total response time (millisec) 150 100 iDistance seq. scan 50 0 15 20 25 30 35 40 45 50 K (b) Total response time 2500 Page accesses 2000 1500 iDistance 1000 500 10 15 20 25 30 35 40 45 K (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_25.jpg?x=375&y=338&w=1079&h=411&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_25.jpg"/>
 
 Fig. 23. Effects of $K$ ,clustered data.
 
@@ -954,7 +889,7 @@ Fig. 23. Effects of $K$ ,clustered data.
 
 <!-- figureText: 14000 800 Total response time (millisec) seq. scan ---x--- 600 500 400 300 200 100 150 200 250 300 350 400 450 500 Dataset size (thousand) (b) Total response time 12000 seq. scan ---x--- Page accesses 10000 8000 6000 2000 0 100 150 200 250 300 350 400 450 500 Dataset size (thousand) (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_25.jpg?x=374&y=845&w=1080&h=418&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_25.jpg"/>
 
 Fig. 24. Effects of dataset size, clustered data.
 
@@ -974,7 +909,7 @@ We also studied the effect of different ${\Delta r}$ on the clustered datasets. 
 
 <!-- figureText: 3000 200 Total response time (millisec) 150 100 20 clusters, sigma=0.05 20 clusters, sigma=0.1 ---x--- 50 20 clusters, sigma=0.2 …* 50 clusters, sigma=0.1 seq. scan ---_ 10 15 20 25 30 35 40 50 (b) Total response time 2500 20 clusters. sigma $= {0.05}$ 20 clusters, sigma=0.1 Page accesses 20 clusters. sigma=0.2 2000 50 clusters. sigma=0.1 1500 1000 500 0 母 15 20 25 30 35 40 45 50 K (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_26.jpg?x=364&y=335&w=1079&h=411&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_26.jpg"/>
 
 Fig. 25. Effects of different data distribution, clustered data.
 
@@ -982,7 +917,7 @@ Fig. 25. Effects of different data distribution, clustered data.
 
 <!-- figureText: 7000 Total response time (millisec) 400 iDistance ----X---- $\cdots  =  - \frac{3}{4}k - \cdots$ 300 seq. scan 200 10 15 20 25 40 45 50 (b) Total response time 6000 iDistance M-tree ----X-- Page accesses 5000 Omni seq. $\cdots  - \frac{m}{m}\cdots$ seq. scan 4000 3000 2000 1000 0 15 20 25 30 50 K (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_26.jpg?x=364&y=821&w=1079&h=414&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_26.jpg"/>
 
 Fig. 26. Comparative study, 16-dimensional uniform data.
 
@@ -1006,7 +941,7 @@ First we present the comparison between the disk-based methods. The results on t
 
 <!-- figureText: 3000 200 Total response time (millisec) 150 iDistance 100 Omni seq seq. scar 50 0 15 20 25 30 35 40 45 50 K (b) Total response time 2500 Page accesses 2000 iDistance 1500 ----X---- Omni seq. $\cdots  + x\cdots$ seq. scan 1000 500 10 15 20 25 30 35 40 45 K (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_27.jpg?x=375&y=337&w=1079&h=412&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_27.jpg"/>
 
 Fig. 27. Comparative study, 30-dimensional clustered data.
 
@@ -1014,7 +949,7 @@ Fig. 27. Comparative study, 30-dimensional clustered data.
 
 <!-- figureText: Page accesses iDistance 300 Total response time (millisec) 200 M-tree ----X---- Omni seq 150 seq. scan 100 50 15 20 25 30 35 40 45 50 K (b) Total response time 1500 M-tree ----X Omni seq. --- ※··· seq. scan 1000 500 10 15 20 25 30 35 40 45 K (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_27.jpg?x=375&y=831&w=1079&h=412&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_27.jpg"/>
 
 Fig. 28. Comparative study, 32-dimensional real data.
 
@@ -1030,7 +965,7 @@ Next we compare the iDistance with the bd-tree [Arya et al. 1994]. The bd-tree w
 
 <!-- figureText: 200 Total response time (second) iDistance 12 bd-tree 4 2 50 100 150 200 250 300 350 400 450 500 Dataset size (thousand) (b) 30-dimensional clustered data Total response time (second) iDistance bd-tree ----X-- 150 100 50 50 100 150 200 250 300 350 400 Dataset size (thousand) (a) 16-dimensional uniform data -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_28.jpg?x=362&y=337&w=1081&h=412&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_28.jpg"/>
 
 Fig. 29. Comparison with a main memory index: bd-tree.
 
@@ -1038,7 +973,7 @@ Fig. 29. Comparison with a main memory index: bd-tree.
 
 <!-- figureText: 500 70 Total response time (millisec) 60 50 40 with updates no updates 30 20 10 80 85 90 95 100 Percentage of data inserted (b) Total response time 450 400 Page accesses 350 300 250 with updates 200 no updates --- 150 100 50 80 85 90 95 100 Percentage of data inserted (a) Page accesses -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_29.jpg?x=375&y=339&w=1078&h=420&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_29.jpg"/>
 
 Fig. 30. iDistance performance with updates.
 
@@ -1078,7 +1013,7 @@ The data-based partitioning approach is more efficient than the space-based part
 
 <!-- figureText: 1200 actual estimated 4 5 Query number 1000 Page accesses 800 600 400 200 0 2 -->
 
-<img src="https://cdn.noedgeai.com/0195c914-b8e7-76ad-b610-2cb563debcc3_30.jpg?x=595&y=337&w=615&h=439&r=0"/>
+<img src="https://raw.githubusercontent.com/DANNHIROAKI/New-Picture-Bed/main/img/0195c914-b8e7-76ad-b610-2cb563debcc3_30.jpg"/>
 
 Fig. 31. Evaluation of the histogram-based cost model.
 
